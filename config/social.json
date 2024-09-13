@@ -1,0 +1,94 @@
+{
+  "ong": {
+    "facebook": {
+      "url": "https://facebook.com/",
+      "id": "facebook"
+    },
+    "twitter": {
+      "url": "",
+      "id": ""
+    },
+    "instagram": {
+      "url": "",
+      "id": ""
+    },
+    "youtube": {
+      "url": "",
+      "id": ""
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/",
+      "id": "linkedin"
+    },
+    "whatsapp": {
+      "url": "https://whatsapp.com/",
+      "id": "whatsapp"
+    },
+    "email": {
+      "url": "fenoina any @social.json",
+      "id": "email vo foronina"
+    },
+    "phone": {
+      "url": "+261 34 00 000 00",
+      "id": "phone"
+    },
+    "phone2": {
+      "url": "",
+      "id": ""
+    },
+    "address": {
+      "url": "",
+      "id": "67 Ha Nord,Antananarivo 101,Madagascar"
+    },
+    "website": {
+      "url": "",
+      "id": ""
+    }
+  },
+  "inbar": {
+    "facebook": {
+      "url": "https://facebook.com/",
+      "id": "facebook"
+    },
+    "twitter": {
+      "url": "",
+      "id": "twitter"
+    },
+    "instagram": {
+      "url": "",
+      "id": "instagram"
+    },
+    "youtube": {
+      "url": "",
+      "id": "youtube"
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/",
+      "id": "linkedin"
+    },
+    "whatsapp": {
+      "url": "https://whatsapp.com/",
+      "id": "whatsapp"
+    },
+    "email": {
+      "url": "fenoina any @social.json",
+      "id": "email"
+    },
+    "phone": {
+      "url": "+261 34 00 000 00",
+      "id": "phone"
+    },
+    "phone2": {
+      "url": "",
+      "id": "phone2"
+    },
+    "address": {
+      "url": "67 Ha Nord,Antananarivo 101,Madagascar",
+      "id": "address"
+    },
+    "website": {
+      "url": "",
+      "id": "website"
+    }
+  }
+}
