@@ -1,5 +1,5 @@
 <h1 align=center>ONG Volotsangana</h1> 
-<p align=center>Bigspring is a web development business template built in Nextjs. Perfect for Creative Agency, Marketing Agency, Design Studios, Digital Marketing Agencies, and other business service websites.</p>
+<p align=center> this is the website of the ong volotsangana.</p>
 <h2 align="center"> <a target="_blank" href="https://bigspring-light-nextjs.vercel.app/" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fbigspring-light-nextjs.vercel.app%2F&form_factor=desktop">Page Speed (100%)🚀</a>
 </h2>
 
@@ -7,7 +7,7 @@
 
 <p align=center>
   <a href="https://github.com/vercel/next.js/releases/tag/v13.0.6" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=NEXTJS&message=13.0&color=000&logo=nextjs" />
+    <!-- <img src="https://img.shields.io/static/v1?label=NEXTJS&message=13.0&color=000&logo=nextjs" /> -->
   </a>
 
   <a href="https://github.com/themefisher/bigspring-light-nextjs/blob/main/LICENSE">
