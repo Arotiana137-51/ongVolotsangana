@@ -1,12 +1,15 @@
 ---
-title: "Contact Us"
+title: "Contactez nous!"
 layout: "contact"
 draft: false
 info: 
-  title: Why you should contact us!
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
+  title: Nous sommes disponibles!
+  description: "Pour toute question ou information supplémentaire sur nos initiatives en faveur du développement durable à travers l’utilisation du bambou, n’hésitez pas à nous contacter. Notre équipe de l’ONG Volotsangana est dédiée à promouvoir des solutions écologiques et innovantes pour un avenir meilleur. Vous pouvez nous joindre par:"
   contacts: 
-    - "phone: +88 125 256 452"
-    - "Mail: [info@bigspring.com](mailto:info@bigspring.com)"
-    - "Address: 360 Main rd, Rio, Brazil"
+    - "phone: (+261) 34 14 220 00<br> (+261) 32 74 044 76 <br>(+261) 34 44 970 69"
+    - "Mail: [ong.volotsangana16@gmail.com](mailto:ong.volotsangana16@gmail.com)"
+    - "Bureau de liaison : Chambre de Commerce et d’Industrie d’Antananarivo (CCIA)- R-1
+20, rue Henry RAZANATSEHENO Antaninarenina- Antananarivo 101 - Madagascar
+Usine : Tanjombato- Tongarivo-Antananarivo 101-Madagascar 
+"
 ---

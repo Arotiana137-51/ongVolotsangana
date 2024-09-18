@@ -3,9 +3,9 @@ title: Produits
 layout: produits
 draft: false
 articles:
-- title: Basic Plan
+- title: Mini-table en bambou 
   image: "/images/produits/IMG_20231028_140902_001.jpg"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
+  description: "Cette table en bambou peut s’intégrer parfaitement dans n’importe quel intérieur, apportant une touche naturelle et élégante. Que ce soit pour un salon, une terrasse ou même un bureau, elle offre une surface pratique tout en ajoutant une note de charme rustique et moderne à la fois"
 - title: Basic Plan
   image: "/images/produits/IMG_20240909_100002_987.jpg"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
@@ -48,7 +48,12 @@ articles:
 - title: Basic Plan
   image: "/images/produits/Salon321.jpg"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
-
+- title: Basic Plan
+  image: "/images/centreforma/pelettes.jpg"
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
+- title: Basic Plan
+  image: "/images/centreforma/Pelettes (1).jpg"
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
 
 
 call_to_action:

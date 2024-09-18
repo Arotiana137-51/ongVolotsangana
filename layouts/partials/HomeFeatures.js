@@ -8,7 +8,7 @@ const HomeFeatures = ({ feature }) => {
         <div className="text-center">
           <h2 className="text-white">{markdownify(feature.title)}</h2>
         </div>
-        <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 ">
           {feature.features.map((item, i) => (
             <div
               className="feature-card rounded-xl bg-white p-5 pb-8 text-center"

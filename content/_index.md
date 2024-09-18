@@ -1,52 +1,52 @@
 ---
 banner:
-  title: Ensemble, Valorisons le Bambou pour préserver nos forêts
-  content: "Le CPTC est un centre i) de formation sur les métiers du bambou et ii) de production commune des produits du bambou situé à Tongarivo-Tanjombato. Il a été mis en place par le programme PROSPERER et l’International Network for Bamboo and Rattan (INBAR) dans le cadre de la mise en œuvre des activités de promotion de la filière bambou à Madagascar notamment dans la région Analamanga. <br>
-  C’est l’ONG Volotsangana, une des structures relais pour la poursuite des activités de promotion de la filière bambou dans la région Analamanga qui en assure aujourd’hui la gestion, suite à un Appel à Manifestation d’Intérêt procédé par le programme PROSPERER et l’INBAR pour le recrutement d’une structure gestionnaire du CPTC."
+  title: Ensemble,<br> Valorisons le Bambou<br> pour préserver nos forêts
+  content: "Qui sommes-nous?<br>L’ONG VOLOTSANGANA crée en 2016, a comme objectifs de promouvoir l’utilisation du bambou pour la protection de l’environnement et l’amélioration des revenus des pépiniéristes, des planteurs, des transformateurs.
+Depuis 2018, l’ONG VOLOTSANGANA dispose et assure la gestion du « Common Production and Training Center » (CPTC) qui est un centre de formation et de production commune dédié à la promotion de la filière bambou.
+Le CPTC est localisé à Tanjombato-Tongarivo, district Atsimondrano de la région Analamanga de Madagascar.
+"
 
-  image: /images/volotsangana.png
+  image: /images/federateur/DSC00249.jpg
   button:
     label: "Contact Us"
     link: "/contact"
 
 # feature
 feature: 
-  title: "Missions du CPTC:"
+  title: "QUELLES sont nos actions ? "
   features:
-  - name: "Fédérateur pour la mise à l’échelle de la plantation d’envergure du bambou"
+  - name: "Favoriser la plantation du bambou"
     icon: "/images/bamboofield.png"
-    content: ""
-  - name: "Structure Relais de délivrance de services technique aux transformateurs et néo entrepreneurs du bambou"
+    content: "Fédérateur pour la mise à l’échelle de la plantation d’envergure du bambou"
+  - name: "Mettre à disposition des matériels& équipements et des matières premières traitées"
     icon: "/images/oop.svg"
-    content: " "
-  - name: "Centre de Formation technique et d‘appui-conseils sur les métiers du bambou"
+    content: "Centre de Production Commune de produits en bambou pour les transformateurs et les néo-entrepreneurs "
+  - name: "Former et accompagner"
     icon: "/images/training.png"
-    content: ""
-  - name: "Centre de Production Commune de produits en bambou"
-    icon: "/images/workshop.png"
-    content: ""
-  - name: "Vente & exposition des produits en bambou dans le futur centre commercial"
-    icon: "/images/seedling.webp"
-    content: ""
-  - name: "Commercialisation des produits ecologiques faits en bambou"
+    content: "Centre de Formation technique et d‘appui-Conseils sur les métiers du bambou (artisanat, charbon, mobiliers et meubles en bambou, plantation du bambou, construction maison en bambou)"
+  # - name: "Centre de Production Commune de produits en bambou"
+  #   icon: "/images/workshop.png"
+  #   content: ""
+  # - name: "Vente & exposition des produits en bambou dans le futur centre commercial"
+  #   icon: "/images/seedling.webp"
+  #   content: ""
+  - name: "Favoriser l’accès au marché des produits de bambou"
     icon: "/images/sales.png"
-    content: ""
+    content: "Le CPTC comme Centre commercial et vitrine des produits en bambou (B2B, potes ouvertes, foires)"
 
 # services
 services:
   - title: "Fédérateur pour la mise à l’échelle de la plantation d’envergure du bambou."
-    content: "Le bambou est une ressource renouvelable stratégique à usages multiples associée au processus de développement durable. Il constitue une alternative intéressante de substitution au bois, notamment dans la construction, l’artisanat, la production industrielle et la production énergétique. Afin d’assurer et améliorer la disponibilité de cette ressource dans la région Analamanga et de répondre à l’objectif « Consolider la filière bambou comme moyens de subsistance en y favorisant la création d’emplois, la génération de revenus, et la gestion de l'environnement », l’ONG Volotsangana envisage de poursuivre les activités de plantation du bambou à grande échelle lancée par le PROPSERE en partenariat avec des Partenaires Techniques et Financiers, les collectivités décentralisées et particulièrement la Direction Régionale de l’Environnement et du Développement Durable du Ministère de l’Environnement.."
+    content: "Le bambou est une ressource renouvelable stratégique à usages multiples associée au processus de développement durable. Il constitue une alternative intéressante de substitution au bois, notamment dans la construction, l’artisanat, la production industrielle et la production énergétique. Afin d’assurer et améliorer la disponibilité de cette ressource dans la région Analamanga et de répondre à l’objectif « Consolider la filière bambou comme moyens de subsistance en y favorisant la création d’emplois, la génération de revenus, et la gestion de l'environnement », l’ONG Volotsangana se positionne en tant que fédérateur pour consolider et développer les activités de plantation du bambou à grande échelle, en partenariat avec des partenaires privés et publics, les collectivités décentralisées et particulièrement la Direction Régionale de l’Environnement et du Développement Durable. ."
     images:
-      - "/images/federateur/_00461a65-849f-42d7-8512-71f18beae904.jpeg"
+     
       - "/images/federateur/DSC00249.jpg"
-      - "/images/federateur/DSC00250.jpg"
-      - "/images/federateur/DSC00956.JPG"
-      - "/images/federateur/DSC01817.JPG"
+
       - "/images/federateur/DSC01818.JPG"
       - "/images/federateur/DSC06632.JPG"
       - "/images/federateur/IMG_5574.JPG"
       - "/images/federateur/DSC06643.JPG"
-      - "/images/federateur/20151217_155550.jpg"
+  
       
       
     button:
@@ -55,42 +55,50 @@ services:
       link: /contact
 
   - title: "Structure Relais de délivrance de services technique aux transformateurs et Centre de production commune des produits en bambou"
-    content: "À l’achèvement du programme PROSPERER (fin 2021), l’ONG VOLOTSANGANA a bénéficié de transfert de savoirs et d’avoir de la part du programme, en tant que structure relai de la promotion de la filière bambou.<br> Ainsi, le CPTC dispose de techniciens encadreurs et des matériels et équipements pour la diffusion technologique et la production commune des produits de transformation du bambou par les bénéficiaires du projet (transformateurs de bambou et de néo-entrepreneurs).<br>En tant que centre de production commune, le CPTC appuie les transformateurs et les néo entrepreneurs de la filière bambou à<br> i) utiliser des bambous traités ;<br> ii) élaborer des prototypes de produits de design/innovation ;<br> iii) fabriquer et encadrer à la mise au point technique de produits <br> iv) rechercher des débouchés.<br>Le partenariat entre la coopérative Volotsangana et l’ISCAM (Institut Supérieur de la Communication, des Affaires et du Management) qui dispose d’une filière design est l’un des partenariats clés de la promotion des produits de design en bambou.Ces activités génèrent des coûts pour le CPTC qui seront subventionnés par le projet mais qui seront progressivement pris en charge par les bénéficiaires à titre de services payants."
+    content: "L’ONG VOLOTSANGANA a bénéficié de transfert de savoirs de la part de l’International Network for Bamboo and Rattan (INBAR) en tant que structure relai de la promotion de la filière bambou à Madagascar.
+Ainsi, l’ONG VOLOTSANGANA dispose au sein du CPTC des techniciens encadreurs et des matériels et équipements pour la diffusion technologique et la production commune des produits de transformation du bambou à l’endroit des acteurs de la filière bambou (transformateurs, néo-entrepreneurs, entrepreneurs, designer..) :<br>
+  <br>•	Production de lamelles de bambou
+  <br>•	Utilisation de lamelles collées
+  <br>•	Elaboration de prototypes de produits de design/innovation
+  <br>•	Encadrement pour la mise au point technique de produits en bambou<br>
+Les moyens à disposition du CPTC sont des matériels et équipements pour assurer ses fonctions de centre de formation et de production commune : bureaux, ateliers, salles de formation, matériels didactiques, différentes machines de traitement et de transformation du bambou et équipements divers (divers outillages de finition, presses, défonceuses, machines à lamelle, machines à bois, groupes électrogènes), tank de traitement, gazifère, …etc).
+
+"
     images: 
       - "/images/servtech/ConstructionDôme.png"
-      - "/images/servtech/FormationCharbon de bambou-Constructiondôme.png"
-      - "/images/servtech/Image1.png"
+      #- "/images/servtech/Image1.png"
       - "/images/servtech/Image2.png"
-      - "/images/servtech/Image3.png"
-      - "/images/servtech/IMG_20230113_120439_875.jpg"
-      - "/images/servtech/IMG_20230113_121123_005.jpg"
-      - "/images/servtech/IMG-20140611-00160.jpg"
-      - "/images/servtech/IMG-20140611-00162.jpg"
+      #- "/images/servtech/Image3.png"
+      #- "/images/servtech/IMG-20140611-00160.jpg"
       - "/images/servtech/IMG-20140611-00163.jpg"
       - "/images/servtech/IMG-20140611-00178.jpg"
-      - "/images/servtech/IMG-20140611-00191.jpg"
+      #- "/images/servtech/IMG-20140611-00191.jpg"
     button:
       enable: true
       label: Nous contacter
       link: /contact
   
   - title: "Centre de formation technique et d’appui-conseils sur les métiers du bambou "
-    content: "À travers le CPTC, l’ONG VOLOTSANGANA délivre des prestations de formation sur les métiers du bambou. <br>
-    Des référentiels formation sur cinq (05) métiers du bambou ont été établis, à savoir : <br>
-    • la production de jeunes plants de bambou ; <br>
-    • la plantation de bambou ;<br>
-    • la fabrication de charbon de bambou et de pelettes de charbon <br>
-    • la construction de maison en bambou <br>
-    • la fabrication de produits de menuiserie en bambou<br>
+    content: "En tant que centre de formation spécialisé sur les métiers du bambou, le CPTC dispose des Référentiels d’Activité, de Compétence et de Formation ;<br>
+A travers le CPTC, l’ONG VOLOTSANGANA dispense des formations et des appuis-conseils aux acteurs de la filière bambou (pépiniéristes, planteurs, transformateurs, néo-entrepreneurs, entrepreneurs…) sur les techniques de :<br>
+  <br>•	Production de jeunes plants de bambou 
+  <br>•	Plantation de bambou 
+  <br>•	Fabrication de charbon de bambou et de pellettes de charbon
+  <br>•	Fabrication de meubles et mobiliser en bambou
+  <br>•	Construction de maison en bambou
+  <br>•	Fabrication de produits de menuiserie en bambou
+  <br>•	Confection d’articles de décoration
+
             "
     images:
+      - "/images/servtech/IMG-20140611-00162.jpg"
+      - "/images/servtech/FormationCharbon de bambou-Constructiondôme.png"
+      - "/images/servtech/IMG_20230113_120439_875.jpg"
+      - "/images/servtech/IMG_20230113_121123_005.jpg"
       - "/images/centreforma/20230913_073426.jpg"
       - "/images/centreforma/Formation pépinière.png"
       - "/images/centreforma/formation5.jpg"
-      - "/images/centreforma/Image4.png"
-      - "/images/centreforma/Image5.png"
-      - "/images/centreforma/pelettes.jpg"
-      - "/images/centreforma/Pelettes (1).jpg"
+     
     
 
     button:
@@ -99,9 +107,9 @@ services:
       link: /contact
 
   - title: "Commercialisation bes produits en bambou"
-    content: "En regard de l’objectif global:<br> « Consolider la filière bambou comme moyen de subsistance en y favorisant la création d’emplois, la génération de revenus, et la gestion de l'environnement »,<br> les fonctions de commercialisation de produits en bambou (recherche de débouchés, marketing, mise en relation…) constituent un des aspects les plus importants du projet pour l’amélioration des revenus des transformateurs et néo-entrepreneurs de la filière bambou.<br>
-    Le projet de centre commercial et vitrine des produits en bambou au sein du CPTC permettra aux transformateurs et jeunes néo-entrepreneurs de bambou de faire connaitre leurs produits.
-    Un show-room a été construit avec les matériaux en bambou mais les travaux restent à finaliser pour être opérationnel.<br> Ce show-room sera mis à disposition des transformateurs et néo-entrepreneurs de bambou pour favoriser la commercialisation de leurs produits (portes ouvertes, célébration de la journée mondiale du bambou, ateliers thématiques…)"
+    content: "L’ONG VOLOTSANGANA dispose d’un show- room au CPTC Tanjombato Tongarivo et d’un bureau de liaison au sein de la Chambre de Commerce et d’Industrie d’Antananarivo (CCIA) pour la commercialisation des produits en bambou.
+Pour la promotion commerciale des produits de bambou, l’ONG VOLOTSANGANA i) participe à des foires périodiques, particulièrement le Salon de la Créativité VOATRA organisé par la CCIA, ii) organise des portes ouvertes et des ateliers thématiques et iii) des actions de recherche de marché et de marketing et des mis en relation avec des donneurs d’ordre.
+"
     images:
       - "/images/produits/IMG_20231028_140902_001.jpg"
       - "/images/produits/IMG_20240909_100002_987.jpg"
@@ -118,6 +126,8 @@ services:
       - "/images/produits/Objets artisanaux.JPG"
       - "/images/produits/Revêtements muraux.jpg"
       - "/images/produits/Salon321.jpg"
+      - "/images/centreforma/pelettes.jpg"
+      - "/images/centreforma/Pelettes (1).jpg"
     button:
       enable: true
       label: Nous contacter

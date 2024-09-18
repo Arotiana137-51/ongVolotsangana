@@ -4,10 +4,7 @@
       "name": "Home",
       "url": "/"
     },
-    {
-      "name": "A propos",
-      "url": "/blogs"
-    },
+  
     {
       "name": "Produits",
       "url": "/produits"
@@ -15,57 +12,55 @@
     {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "FAQ",
-      "url": "/faq"
     }
   ],
 
   "footer": [
     {
-      "name": "Entreprise",
+      "name": "Bureau de liaison:",
       "menu": [
         {
-          "text": "Tarification",
-          "url": "/produits"
+          "text": "Chambre de Commerce et d\u2019Industrie d\u2019Antananarivo (CCIA)- R-1",
+          "url": "#"
         },
         {
-          "text": "Démarrage rapide",
+          "text": "20, rue Henry RAZANATSEHENO",
+          "url": "#"
+        },
+        {
+          "text": "Antaninarenina- Antananarivo 101 - Madagascar",
           "url": "#"
         }
+
       ]
     },
     {
-      "name": "Produit",
+      "name": "Usine:",
       "menu": [
         {
-          "text": "Fonctionnalités",
+          "text": "Tanjombato- Tongarivo",
           "url": "#"
         },
         {
-          "text": "Plateforme",
+          "text": "Antananarivo 101-Madagascar",
           "url": "#"
-        },
-        {
-          "text": "Tarification",
-          "url": "/produits"
         }
+       
       ]
     },
     {
-      "name": "Support",
+      "name": "Telephone:",
       "menu": [
         {
-          "text": "FAQ",
-          "url": "/faq"
-        },
-        {
-          "text": "Politique de confidentialité",
+          "text": " (+261) 34 14 220 00",
           "url": "#"
         },
         {
-          "text": "Termes et conditions",
+          "text": "(+261) 32 74 044",
+          "url": "#"
+        },
+        {
+          "text": "(+261) 34 44 970 69",
           "url": "#"
         }
       ]

@@ -8,34 +8,29 @@
     "logo_height": "48",
     "logo_text": "ONG Volotsangana"
   },
-
-  "inbar":{
+  "inbar": {
     "title": "INTERNATIONAL BAMBOO AND RATTAN ORGANIZATION",
     "logo": "/images/footer-logo-inbar.png",
     "logo_width": "200",
     "logo_height": "48",
     "logo_text": "in partnership for green and inclusive development <br> International Bamboo and Rattan Organization<br>8 Futong Dong Da Jie, Wangjing, Chaoyang District, Beijing 100102, P.R. China<br> +86-10-6470 6161<br> +86-10-6470 2166<br>"
   },
-
   "settings": {
     "pagination": 4,
     "summary_length": 200,
     "blog_folder": "blogs"
   },
-
   "nav_button": {
     "enable": true,
     "label": "un devis?",
     "link": "/contact"
   },
-
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
-    "footer_content": "ONG Volotsangana<br>67 Ha Nord-Est<br>Antananarivo 101<br>Madagascar<br>Phone: +261 34 00 000 00<br>Email:",
+    "footer_content": "ONG Volotsangana<br>Bureau de liaison : Chambre de Commerce et d\u2019Industrie d\u2019Antananarivo (CCIA)- R-1<br>20, rue Henry RAZANATSEHENO Antaninarenina- Antananarivo 101 - Madagascar<br>Usine : Tanjombato- Tongarivo-Antananarivo 101-Madagascar<br><br>Phone: (+261) 34 14 220 00/ (+261) 32 74 044 76/(+261) 34 44 970 69<br><br>Email: ong.volotsangana16@gmail.com",
     "copyright": "Designed and Developed By Arotiana Randrianasolo,©2024|ong Volotsangana"
   },
-
   "metadata": {
     "meta_author": "Arotiana",
     "meta_image": "",
