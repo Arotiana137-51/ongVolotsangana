@@ -5,6 +5,8 @@ import Faq from "@layouts/Faq";
 import Produits from "@layouts/Produits";
 import SeoMeta from "@layouts/SeoMeta";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
+import client from '../../sanity';
+
 
 // for all regular pages
 const RegularPages = async ({ params }) => {
@@ -13,6 +15,8 @@ const RegularPages = async ({ params }) => {
   const { title, meta_title, description, image, noindex, canonical, layout } =
     regularPageData.frontmatter;
   const { content } = regularPageData;
+  const product = await client.fetch(`*[_type == "product"]`);
+ 
 
   return (
     <>
@@ -29,7 +33,7 @@ const RegularPages = async ({ params }) => {
       ) : layout === "contact" ? (
         <Contact data={regularPageData} />
       ) : layout === "produits" ? (
-        <Produits data={regularPageData} />
+        <Produits data={regularPageData} products={product} />
       ) : layout === "faq" ? (
         <Faq data={regularPageData} />
       ) : (
