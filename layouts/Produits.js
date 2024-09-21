@@ -24,7 +24,7 @@ function Produits({ data, products }) {
           </div>
         </div>
       </section>
-      <Cta cta={call_to_action} />
+      {/* <Cta cta={call_to_action} /> */}
     </>
   );
 }

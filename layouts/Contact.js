@@ -1,10 +1,36 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
+import { useState } from 'react';
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
+
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch('/api/sendmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      alert('Email sent successfully!');
+    } else {
+      alert('Failed to send email.');
+    }
+  };
 
   return (
     <section className="section">
@@ -12,17 +38,14 @@ const Contact = ({ data }) => {
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
-            <form
-              className="contact-form"
-              method="POST"
-              action={contact_form_action}
-            >
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <input
                   className="form-input w-full rounded"
                   name="name"
                   type="text"
                   placeholder="Nom"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -32,6 +55,7 @@ const Contact = ({ data }) => {
                   name="email"
                   type="email"
                   placeholder="Votre email"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -41,6 +65,7 @@ const Contact = ({ data }) => {
                   name="subject"
                   type="text"
                   placeholder="Objet"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -48,7 +73,10 @@ const Contact = ({ data }) => {
                 <textarea
                   className="form-textarea w-full rounded-md"
                   rows="7"
+                  name="message"
                   placeholder="Votre message"
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <button type="submit" className="btn btn-primary">
