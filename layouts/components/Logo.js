@@ -23,6 +23,7 @@ const Logo = ({ src }) => {
           src={src ? src : logo}
           alt={title}
           priority
+        
         />
       ) : logo_text ? (
         logo_text

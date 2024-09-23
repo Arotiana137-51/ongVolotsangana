@@ -1,3 +1,5 @@
+"use client"
+
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { useState } from 'react';

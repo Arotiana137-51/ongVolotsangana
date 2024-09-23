@@ -57,12 +57,12 @@ articles:
 
 
 call_to_action:
-  title: Need a larger plan?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
-  image: '/images/cta.svg'
+  title: Nos produits sont entièrement ecologiques
+  content: L’ONG Volotsangana s’engage fermement pour un avenir plus écologique. En mettant en œuvre des initiatives durables et en sensibilisant les communautés locales à l’importance de la protection de l’environnement, Volotsangana travaille sans relâche pour préserver notre planète pour les générations futures. Leur mission est de promouvoir des pratiques respectueuses de l’environnement et de favoriser un développement durable à travers des actions concrètes et éducatives.
+  image: '/images/logo.png'
   button:
     enable: true
-    label: "Contact Us"
+    label: "Contactez nous"
     link: "/contact"
     
 ---

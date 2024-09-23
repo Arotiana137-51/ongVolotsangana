@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import Cta from "./components/Cta";
 import ProductCard from "./components/ProductCard";
 
@@ -24,7 +24,7 @@ function Produits({ data, products }) {
           </div>
         </div>
       </section>
-      {/* <Cta cta={call_to_action} /> */}
+       <Cta cta={call_to_action} /> 
     </>
   );
 }
