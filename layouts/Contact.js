@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { useState } from 'react';
-
+import client from '@sanity/client';
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
@@ -16,23 +16,31 @@ const Contact = ({ data }) => {
     setFormData({ ...formData, [name]: value });
   };
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('/api/sendmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      alert('Email sent successfully!');
-    } else {
-      alert('Failed to send email.');
+    try {
+      const response = await fetch('/api/sendmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData), 
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        alert('Email envoyé avec succès!');
+      } else {
+        alert('Email non envoyé.');
+      }
+    } catch (error) {
+      alert('Error sending email: ' + error.message);
     }
   };
+  
 
   return (
     <section className="section">
