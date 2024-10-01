@@ -101,7 +101,7 @@ const Header = () => {
                 <Link
                   className="btn btn-primary z-0 py-[14px]"
                   href={link}
-                  rel=""
+                  rel="menu"
                 >
                   {label}
                 </Link>
@@ -111,7 +111,7 @@ const Header = () => {
         </div>
         {enable && (
           <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:order-2 md:ml-0 md:flex">
-            <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
+            <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="mobile menu">
               {label}
             </Link>
           </div>

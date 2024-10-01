@@ -27,7 +27,7 @@ const SeoMeta = ({
       {canonical && <link rel="canonical" href={canonical} itemProp="url" />}
 
       {/* noindex robots */}
-      {noindex && <meta name="robots" content="noindex,nofollow" />}
+      {noindex && <meta name="robots" content="noindex,nofollow, bamboo" />}
 
       {/* meta-description */}
       <meta
@@ -51,7 +51,7 @@ const SeoMeta = ({
         property="og:description"
         content={plainify(description ? description : meta_description)}
       />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content=" bamboo green website" />
       <meta
         property="og:url"
         content={`${base_url}/${pathname.replace("/", "")}`}

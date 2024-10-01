@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ong-volotsangana.org/sitemap.xml

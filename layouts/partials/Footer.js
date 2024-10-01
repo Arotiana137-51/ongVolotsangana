@@ -21,7 +21,7 @@ const Footer = () => {
                 <ul className="mt-6">
                   {col?.menu.map((item) => (
                     <li className="mb-1" key={item.text}>
-                      <Link href={item.url} rel="">
+                      <Link href={item.url} rel="ngo services">
                         {item.text}
                       </Link>
                     </li>
@@ -32,12 +32,12 @@ const Footer = () => {
           })}
           {/* social icons */}
           <div className="md-12 sm:col-6 lg:col-3">
-            <Link href="/" aria-label="Bigspring">
+            <Link href="/" aria-label="ngo volotsangana lobo">
               <Image
                 src={config.site.logo}
                 width={config.site.logo_width}
                 height={config.site.logo_height}
-                alt=""
+                alt="logo ngo volotsangana"
               />
             </Link>
             {/* {markdownify(footer_content, "p", "mt-3 mb-6")} */}

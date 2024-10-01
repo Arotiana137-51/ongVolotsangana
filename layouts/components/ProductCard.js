@@ -64,7 +64,7 @@ const ProductCard = ({ product }) => {
             <p className="mt-4">{product.description}</p>
             <p className="mt-4 text-lg font-semibold">Pour plus d'informations</p><br></br>
 
-            <Link className="btn btn-primary z-0 py-[14px]" href="/contact" rel="">
+            <Link className="btn btn-primary z-0 py-[14px]" href="/contact" rel="link to contact">
               Contactez-nous
             </Link>
           </div>
