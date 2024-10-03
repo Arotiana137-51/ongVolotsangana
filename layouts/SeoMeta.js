@@ -18,6 +18,8 @@ const SeoMeta = ({
 
   return (
     <>
+
+      <meta name="google-site-verification" content="hnlnlvrNL-crVAVmCsPaOB2UZRKD0wlrJh-1HWyj_lo" />
       {/* title */}
       <title>
         {plainify(meta_title ? meta_title : title ? title : config.site.title)}
