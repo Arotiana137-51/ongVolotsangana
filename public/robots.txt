@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ong-volotsangana.org
+Host: https://www.ong-volotsangana.org/
 
 # Sitemaps
-Sitemap: https://ong-volotsangana.org/sitemap.xml
+Sitemap: https://www.ong-volotsangana.org/sitemap.xml

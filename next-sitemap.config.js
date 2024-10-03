@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://ong-volotsangana.org', // Replace with your website URL
+    siteUrl: 'https://www.ong-volotsangana.org/', // Replace with your website URL
     generateRobotsTxt: true, // (optional)
     robotsTxtOptions: {
       policies: [
