@@ -14,7 +14,7 @@ const nextConfig = {
       },
     ],
   },
-  output: 'export', // Added this line for static export
+ 
 };
 
 module.exports = nextConfig;
