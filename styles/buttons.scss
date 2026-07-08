@@ -1,25 +1,82 @@
+// ---------------------------------------------------------------------------
+// Buttons — editorial, responsive, scale-on-press for tactile feedback.
+// Transition only the specific properties that change. No `transition: all`.
+// ---------------------------------------------------------------------------
 .btn {
-  @apply inline-block font-primary font-bold border px-7 py-[17px] leading-[18px] transition;
+  @apply inline-flex items-center justify-center gap-2 font-primary font-medium border px-6 py-[13px] leading-[18px];
+  letter-spacing: 0.005em;
+  transition: transform var(--dur) var(--ease-out),
+    box-shadow var(--dur-slow) var(--ease-out),
+    background-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out);
+  will-change: transform;
+
+  &:active {
+    transform: scale(0.97);
+  }
 }
 
 .btn-primary {
-  @apply  bg-lime-600 text-white border-transparent z-[1]  rounded-[30px] relative hover:shadow-[0_12px_24px_-6px_rgba(45,67,121,.1)] transition-all;
+  @apply bg-primary text-white border-transparent rounded-full;
+  box-shadow: 0 10px 24px -12px rgba(31, 58, 42, 0.55);
 
-  &:after {
-    @apply w-full h-full rounded-[30px] absolute left-1/2 top-1/2 translate-x-[-50%]  translate-y-[-50%] content-[''] bg-lime-600 transition-all duration-300 ease-in-out -z-[1];
-  }
-  &:hover::after {
-    @apply  w-[110%] h-[110%] 
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply text-white;
+      background-color: #142b1f;
+      box-shadow: 0 16px 32px -14px rgba(31, 58, 42, 0.6);
+    }
   }
 }
 
 .btn-outline-primary {
-  @apply relative text-text border-0 bg-transparent rounded-[30px] hover:border-transparent hover:text-lime-700;
+  @apply text-primary border-primary bg-transparent rounded-full;
 
-  &:after {
-    @apply w-full h-full rounded-[30px] absolute left-1/2 top-1/2 translate-x-[-50%]  translate-y-[-50%] content-[''] bg-transparent border border-lime-600 transition-all duration-300 ease-in-out z-[0];
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply bg-primary text-white;
+    }
   }
-  &:hover::after {
-    @apply  w-[110%] h-[110%];
+}
+
+.btn-secondary {
+  @apply bg-secondary text-ink border-transparent rounded-full;
+  box-shadow: 0 10px 24px -12px rgba(184, 137, 61, 0.55);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #a3782e;
+      color: #fff;
+    }
+  }
+}
+
+.btn-ghost {
+  @apply text-ink border-transparent bg-transparent rounded-full px-4;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: rgba(14, 26, 17, 0.06);
+    }
+  }
+}
+
+// Pressable link with arrow, used on hero secondary / CTAs.
+.btn-link {
+  @apply inline-flex items-center gap-2 font-primary font-medium text-ink;
+  transition: gap var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
+
+  .arrow {
+    transition: transform var(--dur) var(--ease-out);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply text-primary;
+      .arrow {
+        transform: translateX(3px);
+      }
+    }
   }
 }

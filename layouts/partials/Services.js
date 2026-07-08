@@ -3,7 +3,7 @@
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
-import { Autoplay, Pagination } from "swiper";
+import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 
@@ -13,54 +13,53 @@ const Services = ({ services }) => {
     return (
       <section
         key={`service-${index}`}
-        className={`section ${isOdd && "bg-lime-700"}`}
+        className={`section ${isOdd ? "bg-theme-light" : "bg-body"}`}
       >
-        <div className="container">
-          <div className="items-center gap-8 md:grid md:grid-cols-2">
+        <div className="container-editorial">
+          <div className="grid items-center gap-10 md:grid-cols-12 md:gap-16">
             {/* Carousel */}
-            <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
-              <Swiper
-                modules={[Autoplay, Pagination]}
-                pagination={
-                  service.images.length > 1 ? { clickable: true } : false
-                }
-                autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: true,
-                }}
-                init={service?.images > 1 ? false : true}
-           
-              >
-                {/* Slides */}
-                {service?.images.map((slide, index) => (
-                  <SwiperSlide key={index}>
-                    <Image src={slide} alt="bamboo activity" width={600} height={300}  />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div className={`md:col-span-7 ${!isOdd ? "md:order-2" : ""}`}>
+              <div className="relative overflow-hidden rounded-[4px] bg-theme-light">
+                <Swiper
+                  modules={[Pagination]}
+                  pagination={service.images.length > 1 ? { clickable: true } : false}
+                  spaceBetween={0}
+                  speed={500}
+                  init={service?.images > 1 ? false : true}
+                  className="service-carousel"
+                >
+                  {service?.images.map((slide, i) => (
+                    <SwiperSlide key={i}>
+                      <div className="relative aspect-[4/3] w-full">
+                        <Image
+                          src={slide}
+                          alt={`${service.title} — vue ${i + 1}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 60vw"
+                          className="object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
 
             {/* Content */}
-            <div
-              className={`service-content mt-5 md:mt-0 ${
-                !isOdd && "md:order-1"
-              }`}
-            >
-              <h2 className={`font-bold leading-[40px] ${isOdd && "text-white"} `}>{service?.title}</h2>
-              <p className={`mb-2 mt-4    ${isOdd && "text-white"} `}>{markdownify(service?.content)}</p>
-              {service.button.enable && (
-                <Link
-                  href={service?.button.link}
-                  className={`cta-link inline-flex items-center text-green-800 ${isOdd && "text-white"}`}
-                >
+            <div className={`md:col-span-5 ${!isOdd ? "md:order-1" : ""}`}>
+              <span className="eyebrow mb-5">
+                Pilier {String(index + 1).padStart(2, "0")}
+              </span>
+              <h2 className="font-secondary text-h2-sm md:text-h2 leading-tight text-ink">
+                {service?.title}
+              </h2>
+              <div className="mt-5 text-base md:text-lg leading-relaxed text-text">
+                {markdownify(service?.content, "p")}
+              </div>
+              {service.button?.enable && (
+                <Link href={service?.button.link} className="cta-link mt-7">
                   {service?.button.label}
-                  <Image
-                    className="ml-1"
-                    src="/images/arrow-right.svg"
-                    width={18}
-                    height={14}
-                    alt="arrow"
-                  />
+                  <span aria-hidden="true" className="arrow">→</span>
                 </Link>
               )}
             </div>

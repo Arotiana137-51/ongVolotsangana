@@ -1,9 +1,28 @@
+// ---------------------------------------------------------------------------
+// Motion tokens — Emil-curated easings & durations.
+// Use these via var(--ease-out) in component CSS, never raw cubic-beziers.
+// ---------------------------------------------------------------------------
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur-fast: 120ms;
+  --dur: 180ms;
+  --dur-slow: 240ms;
+}
+
 html {
   @apply text-base;
+  scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-orange-50 font-primary font-normal leading-relaxed text-green-800;
+  @apply bg-body font-primary font-normal leading-relaxed text-text antialiased;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  @apply bg-primary/20 text-dark;
 }
 
 h1,
@@ -12,12 +31,14 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-primary font-bold leading-tight text-green-900;
+  @apply font-secondary font-medium leading-tight tracking-tight text-dark;
+  letter-spacing: -0.02em;
+  font-feature-settings: "ss01";
 }
 
 h1,
 .h1 {
-  @apply font-primary text-h1-sm md:text-h1;
+  @apply font-secondary text-h1-sm md:text-h1;
 }
 
 h2,
@@ -45,29 +66,54 @@ h6,
   @apply text-h6;
 }
 
-p{
-  @apply text-lg;
+p {
+  @apply text-base md:text-lg text-text;
+}
+
+a {
+  @apply text-primary;
+  transition: color var(--dur) var(--ease-out);
+
+  &:hover {
+    @apply text-accent;
+  }
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-body rounded-sm;
 }
 
 code {
   @apply before:hidden after:hidden;
 }
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  .banner-image {
-    margin-top: 12px;
+// ---------------------------------------------------------------------------
+// Reduced motion — keep opacity/color transitions, kill movement.
+// ---------------------------------------------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
-
-    .banner-image {
-      margin-top: 0;
-      margin-left: 20px;
-    }
+// ---------------------------------------------------------------------------
+// Touch / coarse-pointer guard — Tailwind's `hover:` uses `:hover`, which
+// sticks on tap. Neutralize transform-based hovers (lift, scale, translate)
+// on devices without true hover so cards don't stay raised after touch.
+// ---------------------------------------------------------------------------
+@media (hover: none), (pointer: coarse) {
+  .group:hover .group-hover\:scale-\[1\.03\],
+  .group:hover .group-hover\:scale-105,
+  .group:hover .group-hover\:-translate-y-1,
+  .group:hover .group-hover\:translate-x-1,
+  .hover\:-translate-y-1:hover,
+  .hover\:translate-x-1:hover,
+  .hover\:scale-105:hover {
+    transform: none !important;
   }
 }

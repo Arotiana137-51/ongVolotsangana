@@ -4,5 +4,22 @@ strong {
 }
 
 .shadow {
-  @apply shadow-[0_12px_24px_-6px_rgba(45,67,121,0.1)]
+  @apply shadow-soft;
+}
+
+// skip to content (accessibility)
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white;
+}
+
+// hide on touch (decorative hover-only elements)
+@media (hover: none) {
+  .desktop-only {
+    @apply hidden;
+  }
+}
+
+// editorial pull rule on hero copy
+.rule-vertical {
+  @apply inline-block h-6 w-px bg-border/70 mx-2 align-middle;
 }

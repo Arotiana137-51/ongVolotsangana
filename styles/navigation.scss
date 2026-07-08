@@ -1,10 +1,21 @@
 .header {
-  @apply bg-white bg-opacity-55 py-[14px] px-4 md:px-0 md:py-[9px];
+  @apply sticky top-0 z-50 border-b border-transparent px-4 py-3 md:px-0;
+  background-color: rgba(246, 241, 230, 0);
+  transition: background-color var(--dur-slow) var(--ease-out),
+    border-color var(--dur-slow) var(--ease-out),
+    box-shadow var(--dur-slow) var(--ease-out),
+    backdrop-filter var(--dur-slow) var(--ease-out);
+
+  &.is-scrolled {
+    @apply border-border/70 shadow-soft;
+    background-color: rgba(246, 241, 230, 0.92);
+    backdrop-filter: blur(10px);
+  }
 }
 
 // navbar items
 .navbar {
-  @apply relative flex flex-wrap items-center justify-between p-4;
+  @apply relative flex flex-wrap items-center justify-between p-2;
 }
 
 .navbar-brand {
@@ -21,10 +32,11 @@
 
 #nav-menu {
   @apply w-full overflow-hidden md:max-h-full md:w-auto;
+  transition: max-height var(--dur-slow) var(--ease-out);
 }
 
 .nav-item {
-  @apply lg:mx-3;
+  @apply lg:mx-1;
 
   select:focus {
     box-shadow: none;
@@ -32,9 +44,73 @@
 }
 
 .nav-link {
-  @apply py-3 px-2 font-primary text-xl font-bold text-dark transition hover:text-lime-600 md:py-4 lg:px-3;
+  @apply relative inline-flex items-center py-3 px-3 font-primary text-sm font-medium text-ink md:py-4;
+  letter-spacing: 0.005em;
+  transition: color var(--dur) var(--ease-out);
+
+  &::after {
+    @apply absolute left-3 right-3 bottom-2 h-[1px] origin-left scale-x-0 bg-primary content-[''];
+    transition: transform var(--dur-slow) var(--ease-out);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply text-primary;
+    }
+    &:hover::after {
+      @apply scale-x-100;
+    }
+  }
+
+  &-active::after {
+    @apply scale-x-100;
+  }
 
   &-active {
-    @apply text-lime-600;
+    @apply text-primary;
+  }
+}
+
+.nav-dropdown {
+  &-list {
+    @apply min-w-[220px] rounded-2xl border border-border/70 bg-white p-2 shadow-leaf md:mt-2;
+    // origin-aware: scale from the trigger (set by parent inline style)
+    transform-origin: top center;
+  }
+
+  &-item {
+    @apply rounded-lg;
+  }
+
+  &-link {
+    @apply rounded-lg px-3 py-2 text-sm font-medium text-text;
+    transition: background-color var(--dur) var(--ease-out),
+      color var(--dur) var(--ease-out);
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        @apply bg-theme-light text-primary;
+      }
+    }
+  }
+}
+
+// language switcher pill (FR / EN)
+.lang-switch {
+  @apply inline-flex items-center rounded-full border border-border/70 bg-white/60 p-[3px] text-xs font-medium;
+
+  a,
+  button {
+    @apply inline-flex items-center justify-center rounded-full px-3 py-1 text-muted;
+    transition: background-color var(--dur) var(--ease-out),
+      color var(--dur) var(--ease-out);
+
+    &.is-active {
+      @apply bg-ink text-white;
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
   }
 }

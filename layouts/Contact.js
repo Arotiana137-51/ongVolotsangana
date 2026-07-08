@@ -6,8 +6,22 @@ import { useState } from 'react';
 import client from '@sanity/client';
 const Contact = ({ data }) => {
   const { frontmatter } = data;
-  const { title, info } = frontmatter;
+  const { title, info, video } = frontmatter;
   const { contact_form_action } = config.params;
+
+  // Self-hosted VideoObject schema — makes the reportage eligible for
+  // Google video rich results (the video is owned by the NGO).
+  const base = (config.site.base_url || "").replace(/\/$/, "");
+  const videoSchema = video?.src && {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: video.title,
+    description: video.description || video.title,
+    thumbnailUrl: video.poster ? `${base}${video.poster}` : undefined,
+    uploadDate: video.upload_date,
+    contentUrl: `${base}${video.src}`,
+    publisher: { "@type": "NGO", name: "ONG Volotsangana" },
+  };
 
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
@@ -106,6 +120,33 @@ const Contact = ({ data }) => {
             </ul>
           </div>
         </div>
+
+        {video?.src && (
+          <div className="section pb-0">
+            {videoSchema && (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+              />
+            )}
+            <figure className="mx-auto w-full max-w-3xl">
+              <video
+                className="w-full rounded-[4px] bg-ink"
+                controls
+                preload="none"
+                playsInline
+                poster={video.poster || undefined}
+              >
+                <source src={video.src} type="video/mp4" />
+              </video>
+              {video.title && (
+                <figcaption className="mt-3 text-xs uppercase tracking-[0.22em] text-muted">
+                  {video.title}
+                </figcaption>
+              )}
+            </figure>
+          </div>
+        )}
       </div>
     </section>
   );

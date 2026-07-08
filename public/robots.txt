@@ -1,9 +1,11 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
 
 # Host
-Host: https://www.ong-volotsangana.org/
+Host: https://www.ong-volotsangana.org
 
 # Sitemaps
 Sitemap: https://www.ong-volotsangana.org/sitemap.xml
+Sitemap: https://www.ong-volotsangana.org/server-sitemap.xml

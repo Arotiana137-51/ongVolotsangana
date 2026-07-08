@@ -1,19 +1,14 @@
 {
   "site": {
-    "title": "ONG Volotsangana",
-    "base_url": "/",
+    "title": "ONG Volotsangana — Le bambou pour un avenir durable",
+    "base_url": "https://www.ong-volotsangana.org",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "120",
     "logo_height": "45",
-    "logo_text": "ONG Volotsangana"
-  },
-  "inbar": {
-    "title": "INTERNATIONAL BAMBOO AND RATTAN ORGANIZATION",
-    "logo": "/images/footer-logo-inbar.png",
-    "logo_width": "200",
-    "logo_height": "48",
-    "logo_text": "in partnership for green and inclusive development <br> International Bamboo and Rattan Organization<br>8 Futong Dong Da Jie, Wangjing, Chaoyang District, Beijing 100102, P.R. China<br> +86-10-6470 6161<br> +86-10-6470 2166<br>"
+    "logo_text": "ONG Volotsangana",
+    "locale": "fr_MG",
+    "language": "fr"
   },
   "settings": {
     "pagination": 4,
@@ -22,18 +17,29 @@
   },
   "nav_button": {
     "enable": true,
-    "label": "un devis?",
+    "label": "Demander un devis",
     "link": "/contact"
   },
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
     "footer_content": "ONG Volotsangana<br>Bureau de liaison : Chambre de Commerce et d\u2019Industrie d\u2019Antananarivo (CCIA)- R-1<br>20, rue Henry RAZANATSEHENO Antaninarenina- Antananarivo 101 - Madagascar<br>Usine : Tanjombato- Tongarivo-Antananarivo 101-Madagascar<br><br>Phone: (+261) 34 14 220 00/ (+261) 32 74 044 76/(+261) 34 44 970 69<br><br>Email: ong.volotsangana16@gmail.com",
-    "copyright": "Designed and Developed By Arotiana Randrianasolo,©2024|ong Volotsangana"
+    "address": {
+      "street": "20, rue Henry Razanatseheno, Antaninarenina",
+      "locality": "Antananarivo",
+      "postal_code": "101",
+      "country": "MG",
+      "country_name": "Madagascar"
+    },
+    "phone": "+261341422000",
+    "email": "ong.volotsangana16@gmail.com",
+    "founding_year": "2016",
+    "copyright": "Designed and Developed By Arotiana Randrianasolo, ©2024 | ONG Volotsangana"
   },
   "metadata": {
-    "meta_author": "Arotiana",
+    "meta_author": "ONG Volotsangana",
     "meta_image": "/images/logo.png",
-    "meta_description": "NGO promoting bamboo"
+    "meta_description": "Artisanat de bambou de luxe, mobilier et objets fabriqués à Madagascar par l'ONG Volotsangana. Chaque pièce soutient le reboisement et la filière bambou malgache.",
+    "meta_keywords": "artisanat bambou Madagascar, mobilier bambou durable, bambou luxe, handcraft bamboo Madagascar, sustainable bamboo furniture, Madagascar bamboo NGO, Volotsangana, CPTC Tanjombato, Cathariostachys madagascariensis"
   }
 }

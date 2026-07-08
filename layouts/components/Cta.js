@@ -1,34 +1,33 @@
 import { markdownify } from "@lib/utils/textConverter";
-import Image from "next/image";
 import Link from "next/link";
 
 function Cta({ cta }) {
   return (
-    <section className="section px-4 ">
-      <div className="section container rounded-xl shadow bg-lime-100">
-        <div className="row  mx-auto items-center justify-center">
-          <div className="md:col-5 lg:col-4 px-8">
-            <Image
-              className="w-full"
-              src={cta?.image}
-              alt="call to action image"
-              width={325}
-              height={206}
-              
-            />
-          </div>
-          <div className="mt-5 text-center md:col-6 lg:col-5 md:mt-0 md:text-left">
-            <h2>{cta?.title}</h2>
-            <p className="mt-6">{markdownify(cta?.content)}</p>
-            {cta.button.enable && (
-              <Link
-                className="btn btn-primary mt-4"
-                href={cta.button.link}
-                rel={cta.button.rel}
-              >
-                {cta.button.label}
-              </Link>
-            )}
+    <section className="section bg-body">
+      <div className="container-editorial">
+        <div className="relative overflow-hidden rounded-[4px] bg-ink p-10 md:p-16">
+          <div className="grid items-center gap-10 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <span className="eyebrow-light mb-5">Collaborations</span>
+              <h2 className="display-sm text-white">
+                {cta?.title}
+              </h2>
+              <p className="mt-5 max-w-xl text-base md:text-lg leading-relaxed text-white/80">
+                {markdownify(cta?.content)}
+              </p>
+            </div>
+            <div className="md:col-span-5 md:text-right">
+              {cta.button?.enable && (
+                <Link
+                  className="btn btn-secondary"
+                  href={cta.button.link}
+                  rel={cta.button.rel}
+                >
+                  {cta.button.label}
+                  <span aria-hidden="true" className="arrow">→</span>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -1,11 +1,17 @@
 // section style
 .section {
-  @apply pt-[70px] pb-[70px];
+  @apply pt-[88px] pb-[88px];
+}
+.section-tight {
+  @apply pt-[64px] pb-[64px];
 }
 
 // container
 .container {
-  @apply mx-auto max-w-[1140px] px-4;
+  @apply mx-auto max-w-[1180px] px-5;
+}
+.container-editorial {
+  @apply mx-auto max-w-editorial px-5 md:px-10;
 }
 
 // form style
@@ -15,18 +21,30 @@
 
 // social icon style
 .social-icons {
-  @apply space-x-4;
+  @apply space-x-3;
   li {
     @apply inline-block;
     a {
-      @apply block h-9 w-9 rounded-full border border-lime-600 text-center text-white transition hover:bg-lime-600;
+      @apply flex h-10 w-10 items-center justify-center rounded-full border border-primary text-center;
+      transition: background-color var(--dur) var(--ease-out),
+        transform var(--dur) var(--ease-out);
 
       svg {
-        @apply m-auto h-9 fill-lime-600;
+        @apply m-auto h-5 fill-primary;
+        transition: fill var(--dur) var(--ease-out);
       }
 
-      &:hover svg {
-        @apply fill-white;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          @apply bg-primary;
+        }
+        &:hover svg {
+          @apply fill-white;
+        }
+      }
+
+      &:active {
+        transform: scale(0.94);
       }
     }
   }
@@ -35,80 +53,176 @@
 // form style
 .form-input,
 .form-textarea {
-  @apply border-border py-[6px] focus:border-lime-600 focus:ring-transparent;
+  @apply rounded-md border-border bg-white py-2 px-3 text-text shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20;
+  transition: border-color var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
 }
 
-// content style
+// content style (markdown body)
 .content {
-  @apply prose max-w-none prose-headings:font-bold prose-h1:mb-4 prose-h1:text-h1-sm prose-h2:mb-4 prose-h2:mt-4 prose-h2:text-h2-sm prose-h3:mt-4 prose-h3:text-h3-sm prose-h4:mt-4 prose-h5:mb-4 prose-h5:text-base prose-h6:mb-6 prose-h6:text-[15px] prose-a:no-underline hover:prose-a:text-lime-600 prose-blockquote:border-lime-600 prose-blockquote:py-1 prose-blockquote:px-4 prose-ol:pl-4 prose-ul:list-none prose-ul:pl-0 prose-hr:my-5 md:prose-h1:text-h1 md:prose-h2:text-h2 md:prose-h3:text-h3;
+  @apply prose max-w-none prose-headings:font-secondary prose-headings:font-medium prose-headings:text-dark prose-h1:mb-4 prose-h1:text-h1-sm prose-h2:mb-4 prose-h2:mt-4 prose-h2:text-h2-sm prose-h3:mt-4 prose-h3:text-h3-sm prose-h4:mt-4 prose-h5:mb-4 prose-h5:text-base prose-h6:mb-6 prose-h6:text-[15px] prose-p:text-text prose-a:text-primary prose-a:no-underline hover:prose-a:text-accent prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic prose-ol:pl-4 prose-ul:list-none prose-ul:pl-0 prose-hr:my-5 prose-hr:border-border md:prose-h1:text-h1 md:prose-h2:text-h2 md:prose-h3:text-h3;
 
   ul {
     li {
-      @apply relative pl-5 before:absolute before:left-0 before:top-[10px] before:h-2 before:w-2 before:rounded-full before:bg-lime-600 before:content-[''];
+      @apply relative pl-5 before:absolute before:left-0 before:top-[10px] before:h-2 before:w-2 before:rounded-full before:bg-primary before:content-[''];
     }
   }
 }
 
-//feature card
+// feature card
 .feature-card {
-  @apply transition-all duration-200 ease-in-out hover:shadow;
+  @apply rounded-2xl border border-border/60 bg-white p-7;
+  transition: transform var(--dur-slow) var(--ease-out),
+    border-color var(--dur-slow) var(--ease-out),
+    box-shadow var(--dur-slow) var(--ease-out);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply border-primary/40 shadow-leaf;
+      transform: translateY(-4px);
+    }
+  }
 }
 
-//swiper pagination
+// swiper pagination
 .service-carousel .swiper-pagination {
   @apply flex justify-center mt-5;
 
   span {
-    @apply mx-[5px] inline-block h-[10px] w-[10px] cursor-pointer rounded-full border  border-lime-600;
+    @apply mx-[5px] inline-block h-[8px] w-[8px] cursor-pointer rounded-full bg-ink/20 opacity-100;
+    transition: background-color var(--dur) var(--ease-out),
+      width var(--dur) var(--ease-out);
     &.swiper-pagination-bullet-active {
-      @apply bg-lime-600;
+      @apply bg-primary;
+      width: 22px;
+      border-radius: 4px;
     }
   }
 }
 
-//cta link
+// cta link / arrow-link
 .cta-link {
+  @apply inline-flex items-center gap-2 font-medium text-primary;
+  transition: color var(--dur) var(--ease-out), gap var(--dur) var(--ease-out);
+
+  .arrow,
   img {
-    transition: margin 0.3s ease;
+    transition: transform var(--dur) var(--ease-out);
   }
-  &:hover {
-    img {
-      @apply ml-2;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply text-accent;
+      gap: 0.75rem;
+      .arrow,
+      img {
+        transform: translateX(3px);
+      }
     }
   }
 }
 
-//card
+// card
 .card {
-  @apply mt-10 rounded-[4px] border border-[rgba(0,0,0,.125)] bg-white px-5  py-12  shadow md:mt-0;
+  @apply mt-10 rounded-2xl border border-border/60 bg-white px-6 py-12 shadow-soft md:mt-0;
+  transition: transform var(--dur-slow) var(--ease-out),
+    box-shadow var(--dur-slow) var(--ease-out);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply shadow-leaf;
+      transform: translateY(-4px);
+    }
+  }
 }
 
 .col-recommended {
   @apply relative z-10 md:-mx-8 md:-my-6;
 
   .card {
-    @apply border-0 shadow-[0_1rem_3rem_rgba(0,0,0,.175)];
+    @apply border-0 shadow-leaf;
   }
 }
 
-//faq
+// faq
 .faq {
   &-head {
     &::before {
       @apply absolute -left-8 top-1 h-6 w-6 bg-[length:24px] content-[''];
-      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='342.508px' height='342.508px' viewBox='0 0 342.508 342.508' style='enable-background:new 0 0 342.508 342.508;' xml:space='preserve'%3E%3Cpath fill='%230aa8a7' d='M171.254,0C76.837,0,0.003,76.819,0.003,171.248c0,94.428,76.829,171.26,171.251,171.26 c94.438,0,171.251-76.826,171.251-171.26C342.505,76.819,265.697,0,171.254,0z M245.371,136.161l-89.69,89.69 c-2.693,2.69-6.242,4.048-9.758,4.048c-3.543,0-7.059-1.357-9.761-4.048l-39.007-39.007c-5.393-5.398-5.393-14.129,0-19.521 c5.392-5.392,14.123-5.392,19.516,0l29.252,29.262l79.944-79.948c5.381-5.386,14.111-5.386,19.504,0 C250.764,122.038,250.764,130.769,245.371,136.161z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='342.508px' height='342.508px' viewBox='0 0 342.508 342.508' xml:space='preserve'%3E%3Cpath fill='%231F3A2A' d='M171.254,0C76.837,0,0.003,76.819,0.003,171.248c0,94.428,76.829,171.26,171.251,171.26 c94.438,0,171.251-76.826,171.251-171.26C342.505,76.819,265.697,0,171.254,0z M245.371,136.161l-89.69,89.69 c-2.693,2.69-6.242,4.048-9.758,4.048c-3.543,0-7.059-1.357-9.761-4.048l-39.007-39.007c-5.393-5.398-5.393-14.129,0-19.521 c5.392-5.392,14.123-5.392,19.516,0l29.252,29.262l79.944-79.948c5.381-5.386,14.111-5.386,19.504,0 C250.764,122.038,250.764,130.769,245.371,136.161z'/%3E%3C/svg%3E");
     }
   }
   &-body {
     a {
-      @apply text-green-900;
+      @apply text-primary;
     }
   }
 }
 
-//contact
+// contact
 .contact-list {
   a {
-    @apply font-semibold text-green-950;
+    @apply font-medium text-dark;
+    transition: color var(--dur) var(--ease-out);
+    &:hover {
+      @apply text-primary;
+    }
+  }
+}
+
+// eyebrow / tag chip — luxury edition (thin, uppercase, brass dot)
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-muted;
+
+  &::before {
+    content: "";
+    @apply inline-block h-px w-6 bg-muted;
+  }
+}
+
+// eyebrow on dark backgrounds
+.eyebrow-light {
+  @apply inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-white/70;
+
+  &::before {
+    content: "";
+    @apply inline-block h-px w-6 bg-white/40;
+  }
+}
+
+// stat
+.stat-value {
+  @apply font-secondary text-3xl font-medium text-dark md:text-4xl;
+  letter-spacing: -0.02em;
+}
+.stat-label {
+  @apply text-xs font-medium uppercase tracking-[0.18em] text-muted;
+}
+
+// editorial display heading helper
+.display {
+  @apply font-secondary text-display leading-[1.02] tracking-display text-ink;
+  font-weight: 500;
+}
+.display-sm {
+  @apply font-secondary text-display-sm leading-[1.05] tracking-display text-ink;
+  font-weight: 500;
+}
+
+// editorial separators (thin horizontal rule used between editorial bands)
+.rule {
+  @apply block h-px w-full bg-border/70;
+}
+
+// quiet press/partner logo treatment
+.partner-logo {
+  @apply opacity-60 grayscale;
+  transition: opacity var(--dur) var(--ease-out), filter var(--dur) var(--ease-out);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @apply opacity-100;
+      filter: grayscale(0);
+    }
   }
 }

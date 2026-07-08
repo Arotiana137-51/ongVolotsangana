@@ -1,20 +1,47 @@
-/**
- * @type {import('next').NextConfig}
- */
+const createNextIntlPlugin = require("next-intl/plugin");
+const withNextIntl = createNextIntlPlugin("./i18n/request.js");
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
   images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [360, 540, 768, 1024, 1280, 1536, 1920],
+    imageSizes: [16, 32, 64, 96, 128, 256, 384],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'cdn.sanity.io',
-        port: '',
-        pathname: '/images/**',
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/images/**",
       },
     ],
   },
- 
+  async headers() {
+    const cacheStatic =
+      "public, max-age=31536000, s-maxage=31536000, immutable";
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "geolocation=(), microphone=(), camera=()" },
+        ],
+      },
+      {
+        source: "/images/:path*",
+        headers: [{ key: "Cache-Control", value: cacheStatic }],
+      },
+      {
+        source: "/_next/image(.*)",
+        headers: [{ key: "Cache-Control", value: cacheStatic }],
+      },
+    ];
+  },
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

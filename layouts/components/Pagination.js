@@ -26,7 +26,7 @@ const Pagination = ({ section, currentPage, totalPages }) => {
                   ? `${section ? "/" + section : "/"}`
                   : `${section ? "/" + section : ""}/page/${currentPage - 1}`
               }
-              className="inline-flex w-[42px] justify-center rounded-md bg-theme-light px-2 py-2 text-dark hover:bg-primary hover:text-white"
+              className="inline-flex w-[42px] justify-center rounded-md bg-theme-light px-2 py-2 text-dark transition-colors duration-200 ease-out hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 active:scale-95"
             >
               <span className="sr-only">Previous</span>
               <svg
@@ -84,7 +84,7 @@ const Pagination = ({ section, currentPage, totalPages }) => {
                 >
                   <a
                     aria-current="page"
-                    className={`rounded-md  bg-theme-light px-4 py-2 text-dark hover:bg-primary hover:text-white`}
+                    className={`rounded-md bg-theme-light px-4 py-2 text-dark transition-colors duration-200 ease-out hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 active:scale-95`}
                   >
                     {pagination}
                   </a>
@@ -97,7 +97,7 @@ const Pagination = ({ section, currentPage, totalPages }) => {
           {hasNextPage ? (
             <Link
               href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
-              className="inline-flex w-[42px] justify-center rounded-md bg-theme-light px-2 py-2 text-dark hover:bg-primary hover:text-white"
+              className="inline-flex w-[42px] justify-center rounded-md bg-theme-light px-2 py-2 text-dark transition-colors duration-200 ease-out hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 active:scale-95"
             >
               <span className="sr-only">Next</span>
               <svg

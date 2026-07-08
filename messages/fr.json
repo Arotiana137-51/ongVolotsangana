@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "produits": "Produits",
+    "formation": "Formation",
+    "contact": "Contact"
+  },
+  "header": {
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "navAria": "Navigation principale",
+    "langSwitch": "Passer en anglais"
+  },
+  "common": {
+    "skipLink": "Aller au contenu principal",
+    "homeAria": "Accueil",
+    "arrow": "→"
+  },
+  "footer": {
+    "about": "ONG malgache fondée en {year}, dédiée à l'artisanat du bambou et à la protection de l'environnement.",
+    "location": "CPTC · Tanjombato, Antananarivo",
+    "secondaryNav": "Liens secondaires",
+    "home": "Accueil",
+    "produits": "Produits",
+    "contact": "Contact"
+  },
+  "home": {
+    "bannerEyebrow": "Bambou · Madagascar · Depuis 2016",
+    "discover": "Découvrir la collection",
+    "discoverAria": "Découvrir les produits en bambou",
+    "mission": "Notre mission",
+    "figCaptionLeft": "Filière complète",
+    "figCaptionRight": "CPTC · Tanjombato",
+    "statSince": "Depuis",
+    "statCenter": "Centre",
+    "statPartner": "Partenaire",
+    "statSector": "Filière",
+    "statSectorValue": "100% Bambou",
+    "featuresEyebrow": "La filière",
+    "featuresIntro": "De la pépinière à la commercialisation — une chaîne de valeur complète, intégrée et durable, opérée depuis Tanjombato (Antananarivo).",
+    "materialsEyebrow": "Matière & savoir-faire",
+    "materialsTitle": "Le bambou de Madagascar, traité avec soin.",
+    "materialsIntro": "Espèce endémique <em>Cathariostachys madagascariensis</em>, sélection des chaumes, séchage maîtrisé, traitement contre les insectes, transformation en lamelles collées : chaque étape conditionne la longévité de la pièce finale.",
+    "materialsCaptionPlantation": "Plantation · Analamanga",
+    "materialsCaptionWorkshop": "Atelier · CPTC Tanjombato",
+    "workflowEyebrow": "Pourquoi le bambou",
+    "servicePillar": "Pilier {index}",
+    "ctaEyebrow": "Collaborations",
+    "craftEyebrow": "Notre mission",
+    "craftLink": "Travailler avec nous",
+    "partnersLabel": "En partenariat avec",
+    "featuredEyebrow": "La collection",
+    "featuredTitle": "Pièces signées Volotsangana",
+    "featuredIntro": "Mobilier, objets et artisanat en bambou — pensés à Madagascar, fabriqués au CPTC de Tanjombato.",
+    "featuredLink": "Voir toute la collection"
+  },
+  "produits": {
+    "eyebrow": "Catalogue",
+    "intro": "Mobilier, objets, artisanat, charbon, construction — la collection Volotsangana, fabriquée à Tanjombato et destinée aux particuliers, hôtels, designers et distributeurs.",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbProduits": "Produits"
+  },
+  "product": {
+    "detail": "Voir le détail →",
+    "detailAria": "Voir le détail de {title}",
+    "piece": "Pièce",
+    "close": "Fermer",
+    "quote": "Demander un devis",
+    "sheet": "Voir la fiche produit",
+    "collection": "Voir la collection",
+    "breadcrumbAria": "Fil d'Ariane",
+    "matiere": "Matière",
+    "origine": "Origine",
+    "origineValue": "Madagascar — CPTC",
+    "fabrication": "Fabrication",
+    "fabricationValue": "Artisanale, sur commande",
+    "defaultMaterial": "Bambou"
+  },
+  "faq": {
+    "eyebrow": "FAQ"
+  },
+  "notFound": {
+    "eyebrow": "Erreur 404",
+    "back": "Retour à l'accueil"
+  }
+}

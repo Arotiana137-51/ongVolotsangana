@@ -1,96 +1,69 @@
 ---
+# ---------------------------------------------------------------------------
+# Homepage content — ONG Volotsangana
+# Positioning: luxury bamboo handcrafts from Madagascar, NGO origin story.
+# ---------------------------------------------------------------------------
+
+seo:
+  title: "Artisanat du bambou de Madagascar — ONG Volotsangana"
+  description: "Mobilier, objets et artisanat en bambou conçus à Madagascar. Une filière complète, durable, opérée depuis 2016 par l'ONG Volotsangana."
+  keywords: "artisanat bambou Madagascar, mobilier bambou, ONG Volotsangana, bambou durable, CPTC Tanjombato, design éco-responsable"
+
 banner:
-  title: Ensemble,<br> Valorisons le Bambou<br> pour préserver nos forêts
-  content: "Qui sommes-nous?<br>L’ONG VOLOTSANGANA crée en 2016, a comme objectifs de promouvoir l’utilisation du bambou pour la protection de l’environnement et l’amélioration des revenus des pépiniéristes, des planteurs, des transformateurs.
-Depuis 2018, l’ONG VOLOTSANGANA dispose et assure la gestion du « Common Production and Training Center » (CPTC) qui est un centre de formation et de production commune dédié à la promotion de la filière bambou.
-Le CPTC est localisé à Tanjombato-Tongarivo, district Atsimondrano de la région Analamanga de Madagascar.
-"
-
-  image: /images/federateur/DSC00249.jpg
+  title: "L'artisanat du bambou,<br>repensé à Madagascar."
+  content: "Mobilier, objets et pièces sur mesure issus d'une filière bambou intégrée — de la plantation au showroom — opérée depuis 2016 par l'ONG Volotsangana."
+  image: /images/produits/Meuble canapé 3 places.jpg
   button:
-    label: "Contact Us"
-    link: "/contact"
+    label: "Découvrir la collection"
+    link: "/produits"
 
-# feature
-feature: 
-  title: "QUELLES sont nos actions ? "
+# Mission / craft story — sits below featured products
+craft_story:
+  title: "Chaque pièce contribue à reboiser Madagascar."
+  image: /images/centreforma/20230913_073426.jpg
+  body:
+    - "Fondée en 2016, l'ONG Volotsangana promeut le bambou comme alternative durable au bois — une espèce endémique, à croissance rapide, qui capte 30 % de CO₂ en plus qu'un arbre feuillu et restaure les sols appauvris."
+    - "Depuis 2018, nous opérons le Common Production and Training Center (CPTC) à Tanjombato : un centre de formation, de production commune et de showroom, dédié à la filière bambou malgache."
+    - "Acheter une pièce Volotsangana, c'est soutenir des planteurs, des transformateurs et des artisans — et contribuer à la régénération des terres."
+
+# feature — value chain (4 pillars editorial band)
+feature:
+  title: "Une filière bambou complète, de la plantation au produit fini."
   features:
-  - name: "Favoriser la plantation du bambou"
-    icon: "/images/bamboofield.png"
-    content: "Fédérateur pour la mise à l’échelle de la plantation d’envergure du bambou"
-  - name: "Mettre à disposition des matériels& équipements et des matières premières traitées"
-    icon: "/images/oop.svg"
-    content: "Centre de Production Commune de produits en bambou pour les transformateurs et les néo-entrepreneurs "
-  - name: "Former et accompagner"
-    icon: "/images/training.png"
-    content: "Centre de Formation technique et d‘appui-Conseils sur les métiers du bambou (artisanat, charbon, mobiliers et meubles en bambou, plantation du bambou, construction maison en bambou)"
-  # - name: "Centre de Production Commune de produits en bambou"
-  #   icon: "/images/workshop.png"
-  #   content: ""
-  # - name: "Vente & exposition des produits en bambou dans le futur centre commercial"
-  #   icon: "/images/seedling.webp"
-  #   content: ""
-  - name: "Favoriser l’accès au marché des produits de bambou"
-    icon: "/images/sales.png"
-    content: "Le CPTC comme Centre commercial et vitrine des produits en bambou (B2B, potes ouvertes, foires)"
+    - name: "Plantation à grande échelle"
+      icon: "/images/bamboofield.png"
+      content: "Pépinière, plantation et accompagnement des planteurs en région Analamanga, en partenariat avec la DREDD."
+    - name: "Centre de production commune"
+      icon: "/images/oop.svg"
+      content: "Matériels, équipements et matières traitées mis à disposition des transformateurs et néo-entrepreneurs du bambou."
+    - name: "Formation & appui-conseil"
+      icon: "/images/training.png"
+      content: "Métiers du bambou — artisanat, mobilier, charbon, construction — sur référentiel d'activité, de compétence et de formation."
+    - name: "Commercialisation & marché"
+      icon: "/images/sales.png"
+      content: "Showroom au CPTC, bureau de liaison à la CCIA, foires et portes-ouvertes — pour les pièces finies comme pour les commandes B2B."
 
-# services
+# services — editorial 2-up alternating
 services:
-  - title: "Fédérateur pour la mise à l’échelle de la plantation d’envergure du bambou."
-    content: "Le bambou est une ressource renouvelable stratégique à usages multiples associée au processus de développement durable. Il constitue une alternative intéressante de substitution au bois, notamment dans la construction, l’artisanat, la production industrielle et la production énergétique. Afin d’assurer et améliorer la disponibilité de cette ressource dans la région Analamanga et de répondre à l’objectif « Consolider la filière bambou comme moyens de subsistance en y favorisant la création d’emplois, la génération de revenus, et la gestion de l'environnement », l’ONG Volotsangana se positionne en tant que fédérateur pour consolider et développer les activités de plantation du bambou à grande échelle, en partenariat avec des partenaires privés et publics, les collectivités décentralisées et particulièrement la Direction Régionale de l’Environnement et du Développement Durable. ."
+  - title: "Plantation d'envergure : sécuriser la matière, restaurer le territoire."
+    content: "Ressource renouvelable et stratégique à usages multiples, le bambou substitue le bois dans la construction, l'artisanat, la production industrielle et énergétique. L'ONG Volotsangana se positionne en fédérateur pour consolider et développer la plantation du bambou à grande échelle, en partenariat avec les secteurs privé et public, les collectivités décentralisées et particulièrement les Directions Régionales de l'Environnement et du Développement Durable."
     images:
-     
-      - "/images/federateur/DSC00249.jpg"
-
       - "/images/federateur/DSC01818.JPG"
       - "/images/federateur/DSC06632.JPG"
       - "/images/federateur/IMG_5574.JPG"
       - "/images/federateur/DSC06643.JPG"
-  
-      
-      
     button:
       enable: true
-      label: "Contactez nous"
+      label: "Échanger avec nous"
       link: /contact
 
-  - title: "Structure Relais de délivrance de services technique aux transformateurs et Centre de production commune des produits en bambou"
-    content: "L’ONG VOLOTSANGANA a bénéficié de transfert de savoirs de la part de l’International Network for Bamboo and Rattan (INBAR) en tant que structure relai de la promotion de la filière bambou à Madagascar.
-Ainsi, l’ONG VOLOTSANGANA dispose au sein du CPTC des techniciens encadreurs et des matériels et équipements pour la diffusion technologique et la production commune des produits de transformation du bambou à l’endroit des acteurs de la filière bambou (transformateurs, néo-entrepreneurs, entrepreneurs, designer..) :<br>
-  <br>•	Production de lamelles de bambou
-  <br>•	Utilisation de lamelles collées
-  <br>•	Elaboration de prototypes de produits de design/innovation
-  <br>•	Encadrement pour la mise au point technique de produits en bambou<br>
-Les moyens à disposition du CPTC sont des matériels et équipements pour assurer ses fonctions de centre de formation et de production commune : bureaux, ateliers, salles de formation, matériels didactiques, différentes machines de traitement et de transformation du bambou et équipements divers (divers outillages de finition, presses, défonceuses, machines à lamelle, machines à bois, groupes électrogènes), tank de traitement, gazifère, …etc).
-
-"
-    images: 
+  - title: "Formation, délivrance de services & appui-conseil : les métiers du bambou."
+    content: "Centre de formation spécialisé sur les métiers du bambou, le CPTC dispose des Référentiels d'Activité, de Compétence et de Formation. L'ONG Volotsangana y dispense formations et appuis-conseils aux acteurs de la filière — pépiniéristes, planteurs, artisans, transformateurs, néo-entrepreneurs, entrepreneurs. Référentiels : production de jeunes plants, plantation, fabrication de charbon et de pellets, meubles et mobilier, construction de maison, menuiserie. Services et appui-conseil : traitement du bambou et des lamelles, production de lamelles, lamelles collées, prototypage de produits design/innovation, mise au point technique des produits en bambou."
+    images:
       - "/images/servtech/ConstructionDôme.png"
-      #- "/images/servtech/Image1.png"
       - "/images/servtech/Image2.png"
-      #- "/images/servtech/Image3.png"
-      #- "/images/servtech/IMG-20140611-00160.jpg"
       - "/images/servtech/IMG-20140611-00163.jpg"
       - "/images/servtech/IMG-20140611-00178.jpg"
-      #- "/images/servtech/IMG-20140611-00191.jpg"
-    button:
-      enable: true
-      label: Nous contacter
-      link: /contact
-  
-  - title: "Centre de formation technique et d’appui-conseils sur les métiers du bambou "
-    content: "En tant que centre de formation spécialisé sur les métiers du bambou, le CPTC dispose des Référentiels d’Activité, de Compétence et de Formation ;<br>
-A travers le CPTC, l’ONG VOLOTSANGANA dispense des formations et des appuis-conseils aux acteurs de la filière bambou (pépiniéristes, planteurs, transformateurs, néo-entrepreneurs, entrepreneurs…) sur les techniques de :<br>
-  <br>•	Production de jeunes plants de bambou 
-  <br>•	Plantation de bambou 
-  <br>•	Fabrication de charbon de bambou et de pellettes de charbon
-  <br>•	Fabrication de meubles et mobiliser en bambou
-  <br>•	Construction de maison en bambou
-  <br>•	Fabrication de produits de menuiserie en bambou
-  <br>•	Confection d’articles de décoration
-
-            "
-    images:
       - "/images/servtech/IMG-20140611-00162.jpg"
       - "/images/servtech/FormationCharbon de bambou-Constructiondôme.png"
       - "/images/servtech/IMG_20230113_120439_875.jpg"
@@ -98,18 +71,13 @@ A travers le CPTC, l’ONG VOLOTSANGANA dispense des formations et des appuis-co
       - "/images/centreforma/20230913_073426.jpg"
       - "/images/centreforma/Formation pépinière.png"
       - "/images/centreforma/formation5.jpg"
-     
-    
-
     button:
       enable: true
       label: Nous contacter
       link: /contact
 
-  - title: "Commercialisation bes produits en bambou"
-    content: "L’ONG VOLOTSANGANA dispose d’un show- room au CPTC Tanjombato Tongarivo et d’un bureau de liaison au sein de la Chambre de Commerce et d’Industrie d’Antananarivo (CCIA) pour la commercialisation des produits en bambou.
-Pour la promotion commerciale des produits de bambou, l’ONG VOLOTSANGANA i) participe à des foires périodiques, particulièrement le Salon de la Créativité VOATRA organisé par la CCIA, ii) organise des portes ouvertes et des ateliers thématiques et iii) des actions de recherche de marché et de marketing et des mis en relation avec des donneurs d’ordre.
-"
+  - title: "Commercialisation : showroom, foires et marché B2B."
+    content: "En collaboration avec la Chambre de Commerce et d'Industrie d'Antananarivo, l'ONG Volotsangana promeut les produits de bambou à travers i) des salons et des foires (vente-exposition, BtoB), particulièrement le Salon de la Créativité VOATRA organisé par la CCIA, ii) des portes ouvertes et des ateliers thématiques et iii) des actions de recherche de marché et de marketing. Showroom au CPTC à Tanjombato-Tongarivo, bureau de liaison à la CCIA."
     images:
       - "/images/produits/IMG_20231028_140902_001.jpg"
       - "/images/produits/IMG_20240909_100002_987.jpg"
@@ -126,26 +94,24 @@ Pour la promotion commerciale des produits de bambou, l’ONG VOLOTSANGANA i) pa
       - "/images/produits/Objets artisanaux.JPG"
       - "/images/produits/Revêtements muraux.jpg"
       - "/images/produits/Salon321.jpg"
-      - "/images/centreforma/pelettes.jpg"
-      - "/images/centreforma/Pelettes (1).jpg"
     button:
       enable: true
       label: Nous contacter
       link: /contact
 
-# workflow
-workflow: 
-  title: "Bambou : La nature durable, pour un avenir responsable."
+# workflow — full-bleed editorial band
+workflow:
+  title: "Le bambou : une matière contemporaine, profondément durable."
   image: "/images/bamboo-banner.jpg"
-  description: ""
+  description: "Croissance rapide, captation carbone supérieure de 30 %, restauration des sols : le bambou est un matériau d'avenir pour le design et l'architecture éco-responsables."
 
-# call_to_action
+# call_to_action — B2B band (hotels, designers, distributors)
 call_to_action:
-  title:  L'USAGE DU BAMBOU EST ECOLOGIQUE
-  content: Le bambou est une alternative écologique remarquable au bois traditionnel. En plus de sa croissance rapide, il peut être récolté sans endommager l’environnement, ce qui en fait une ressource renouvelable et durable. Le bambou capte jusqu’à 30% de plus de dioxyde de carbone que les arbres feuillus et libère 30% d’oxygène en plus, contribuant ainsi à la lutte contre le changement climatique. De plus, il aide à prévenir l’érosion des sols et à restaurer les terres appauvries. Utiliser le bambou comme substitut du bois permet non seulement de préserver les forêts, mais aussi de réduire notre empreinte carbone globale, tout en offrant une solution biodégradable et durable pour de nombreux produits.
+  title: "Travailler avec Volotsangana — hôtels, designers, distributeurs."
+  content: "Commandes sur mesure, gros volumes, collaborations design ou sourcing : parlons de votre projet. Nous fabriquons à Tanjombato, nous livrons à l'international."
   image: '/images/eco.png'
   button:
     enable: true
-    label: "Contactez nous"
+    label: "Demander un devis"
     link: "/contact"
 ---

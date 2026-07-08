@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "produits": "Products",
+    "formation": "Training",
+    "contact": "Contact"
+  },
+  "header": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navAria": "Main navigation",
+    "langSwitch": "Switch to French"
+  },
+  "common": {
+    "skipLink": "Skip to main content",
+    "homeAria": "Home",
+    "arrow": "→"
+  },
+  "footer": {
+    "about": "Malagasy NGO founded in {year}, dedicated to bamboo craftsmanship and environmental protection.",
+    "location": "CPTC · Tanjombato, Antananarivo",
+    "secondaryNav": "Secondary links",
+    "home": "Home",
+    "produits": "Products",
+    "contact": "Contact"
+  },
+  "home": {
+    "bannerEyebrow": "Bamboo · Madagascar · Since 2016",
+    "discover": "Explore the collection",
+    "discoverAria": "Explore the bamboo products",
+    "mission": "Our mission",
+    "figCaptionLeft": "Full value chain",
+    "figCaptionRight": "CPTC · Tanjombato",
+    "statSince": "Since",
+    "statCenter": "Centre",
+    "statPartner": "Partner",
+    "statSector": "Sector",
+    "statSectorValue": "100% Bamboo",
+    "featuresEyebrow": "The value chain",
+    "featuresIntro": "From nursery to market — a complete, integrated and sustainable value chain, run from Tanjombato (Antananarivo).",
+    "materialsEyebrow": "Material & craftsmanship",
+    "materialsTitle": "Madagascar bamboo, treated with care.",
+    "materialsIntro": "Endemic species <em>Cathariostachys madagascariensis</em>, culm selection, controlled drying, insect treatment, transformation into glued laminates: each step determines the longevity of the finished piece.",
+    "materialsCaptionPlantation": "Plantation · Analamanga",
+    "materialsCaptionWorkshop": "Workshop · CPTC Tanjombato",
+    "workflowEyebrow": "Why bamboo",
+    "servicePillar": "Pillar {index}",
+    "ctaEyebrow": "Collaborations",
+    "craftEyebrow": "Our mission",
+    "craftLink": "Work with us",
+    "partnersLabel": "In partnership with",
+    "featuredEyebrow": "The collection",
+    "featuredTitle": "Signature Volotsangana pieces",
+    "featuredIntro": "Bamboo furniture, objects and craftwork — designed in Madagascar, made at the CPTC in Tanjombato.",
+    "featuredLink": "View the whole collection"
+  },
+  "produits": {
+    "eyebrow": "Catalogue",
+    "intro": "Furniture, objects, craftwork, charcoal, construction — the Volotsangana collection, made in Tanjombato for individuals, hotels, designers and distributors.",
+    "breadcrumbHome": "Home",
+    "breadcrumbProduits": "Products"
+  },
+  "product": {
+    "detail": "View details →",
+    "detailAria": "View details for {title}",
+    "piece": "Piece",
+    "close": "Close",
+    "quote": "Request a quote",
+    "sheet": "View product sheet",
+    "collection": "View the collection",
+    "breadcrumbAria": "Breadcrumb",
+    "matiere": "Material",
+    "origine": "Origin",
+    "origineValue": "Madagascar — CPTC",
+    "fabrication": "Manufacture",
+    "fabricationValue": "Handcrafted, made to order",
+    "defaultMaterial": "Bamboo"
+  },
+  "faq": {
+    "eyebrow": "FAQ"
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "back": "Back to home"
+  }
+}

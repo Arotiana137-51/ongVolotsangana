@@ -6,16 +6,21 @@ function Faq({ data }) {
   return (
     <section className="section">
       <div className="container">
-        {markdownify(title, "h1", "text-center font-normal")}
-        <div className="section row  -mt-6">
+        <div className="text-center">
+          <span className="eyebrow mb-4">FAQ</span>
+          {markdownify(title, "h1", "font-secondary text-h1-sm md:text-h1")}
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {faqs.map((faq, index) => (
-            <div key={index} className="col-12 mt-6 md:col-6">
-              <div className="p-12  shadow">
-                <div className="faq-head relative">
-                  {markdownify(faq.title, "h4")}
-                </div>
-                {markdownify(faq.answer, "p", "faq-body mt-4")}
+            <div
+              key={index}
+              tabIndex={0}
+              className="rounded-2xl border border-border/60 bg-white p-8 shadow-soft transition-shadow duration-300 ease-out hover:shadow-leaf focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+            >
+              <div className="faq-head relative pl-10">
+                {markdownify(faq.title, "h4", "font-secondary text-dark")}
               </div>
+              {markdownify(faq.answer, "p", "faq-body mt-4 text-text")}
             </div>
           ))}
         </div>
