@@ -21,7 +21,7 @@ async function getProduct(slug) {
 }
 
 export async function generateMetadata({ params }) {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
   const product = await getProduct(slug);
   if (!product) return buildMetadata({ noindex: true, locale });
   const image = product.images?.[0]
@@ -53,7 +53,7 @@ export async function generateStaticParams() {
 }
 
 const ProductPage = async ({ params }) => {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("product");
   const tNav = await getTranslations("produits");

@@ -17,7 +17,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   return buildMetadata({ path: "/", locale });
 }
 
@@ -32,7 +32,7 @@ export const viewport = {
 };
 
 export default async function LocaleLayout({ children, params }) {
-  const { locale } = params;
+  const { locale } = await params;
   if (!routing.locales.includes(locale)) notFound();
 
   setRequestLocale(locale);
@@ -43,7 +43,7 @@ export default async function LocaleLayout({ children, params }) {
   const sf = theme.fonts.font_family.secondary;
 
   return (
-    <html suppressHydrationWarning lang={locale}>
+    <html suppressHydrationWarning lang={locale} data-scroll-behavior="smooth">
       <head>
         <link rel="shortcut icon" href={config.site.favicon} />
         <link rel="icon" type="image/png" href={config.site.favicon} />

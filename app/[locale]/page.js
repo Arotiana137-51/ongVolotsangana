@@ -11,7 +11,7 @@ import { getListPage } from "@lib/contentParser";
 import { setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   const homePage = await getListPage("content/_index.md", locale);
   const { frontmatter } = homePage;
   const { banner, seo } = frontmatter;
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Home = async ({ params }) => {
-  const { locale } = params;
+  const { locale } = await params;
   setRequestLocale(locale);
   const homePage = await getListPage("content/_index.md", locale);
   const { frontmatter } = homePage;

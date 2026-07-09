@@ -9,7 +9,7 @@ import { setRequestLocale } from "next-intl/server";
 const { blog_folder } = config.settings;
 
 export async function generateMetadata({ params }) {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
   const postIndex = await getListPage(`content/${blog_folder}/_index.md`, locale);
   const { frontmatter } = postIndex;
   const currentPage = parseInt(slug || 1);
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
 }
 
 const BlogPagination = async ({ params }) => {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
   setRequestLocale(locale);
   const currentPage = parseInt(slug || 1);
   const { pagination } = config.settings;

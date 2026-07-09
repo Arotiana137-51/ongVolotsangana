@@ -11,7 +11,7 @@ import { setRequestLocale } from "next-intl/server";
 import client from '../../../sanity';
 
 export async function generateMetadata({ params }) {
-  const { regular, locale } = params;
+  const { regular, locale } = await params;
   const data = await getRegularPage(regular, locale);
   const { title, meta_title, description, image, noindex, canonical } =
     data.frontmatter || {};
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
 
 // for all regular pages
 const RegularPages = async ({ params }) => {
-  const { regular, locale } = params;
+  const { regular, locale } = await params;
   setRequestLocale(locale);
   const regularPageData = await getRegularPage(regular, locale);
   const { layout } = regularPageData.frontmatter;

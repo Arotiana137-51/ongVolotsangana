@@ -23,6 +23,7 @@ const Header = () => {
   const { main } = menu;
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
 
   const { logo } = config.site;
   const { enable, link } = config.nav_button;
@@ -34,9 +35,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
+  // close the mobile nav on route change (derive during render, no effect)
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setNavOpen(false);
-  }, [pathname]);
+  }
 
   return (
     <header className={`header ${scrolled ? "is-scrolled" : ""}`}>

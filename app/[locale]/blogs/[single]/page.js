@@ -7,7 +7,7 @@ import { setRequestLocale } from "next-intl/server";
 const { blog_folder } = config.settings;
 
 export async function generateMetadata({ params }) {
-  const { single, locale } = params;
+  const { single, locale } = await params;
   const posts = await getSinglePage(`content/${blog_folder}`, locale);
   const post = posts.find((p) => p.slug === single);
   if (!post)
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Article = async ({ params }) => {
-  const { single, locale } = params;
+  const { single, locale } = await params;
   setRequestLocale(locale);
   const posts = await getSinglePage(`content/${blog_folder}`, locale);
   const post = posts.filter((p) => p.slug == single);

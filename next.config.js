@@ -6,6 +6,11 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  // Tailwind layers force @import inside @layer blocks, where Sass forbids
+  // @use — silence the (harmless) @import deprecation until Dart Sass 3.
+  sassOptions: {
+    silenceDeprecations: ["import"],
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 540, 768, 1024, 1280, 1536, 1920],
@@ -34,10 +39,6 @@ const nextConfig = {
       },
       {
         source: "/images/:path*",
-        headers: [{ key: "Cache-Control", value: cacheStatic }],
-      },
-      {
-        source: "/_next/image(.*)",
         headers: [{ key: "Cache-Control", value: cacheStatic }],
       },
     ];
