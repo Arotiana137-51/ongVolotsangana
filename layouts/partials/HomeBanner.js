@@ -25,10 +25,10 @@ const HomeBanner = ({ banner }) => {
               </div>
               
               <Image
-                className="banner-image"
+                className="banner-image h-auto w-full max-w-[450px]"
                 src={banner.image}
                 width={450}
-                height={190}
+                height={338}
                 alt="banner image"
                 priority
               />

@@ -16,12 +16,12 @@ const ProductCard = ({ product }) => {
     <div className="bg-white rounded-lg shadow-md p-4 m-4">
       {/* here the image shows using the old  */
       }
-      <div className="relative w-full h-48 rounded-t-lg">
+      <div className="relative w-full h-80 rounded-t-lg overflow-hidden">
         <Image
           src={urlFor(product.images[0]).url()}
           alt={product.title}
           fill
-          className="object-contain " />
+          className="object-contain" />
       </div>
       <h2 className="text-xl font-semibold mt-4">{product.title}</h2>
       <button

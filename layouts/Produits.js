@@ -13,9 +13,9 @@ function Produits({ data, products }) {
   return (
     <>
       <section className="section pb-0">
-        <div className="container">
+        <div className="mx-auto w-4/5 px-4">
           <h1 className="text-center font-normal">{title}</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
     
             {products.map((products, index) => (
               <ProductCard key={index} product={products} />

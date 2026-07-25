@@ -117,6 +117,7 @@ A travers le CPTC, l’ONG VOLOTSANGANA dispense des formations et des appuis-co
     content: "L’ONG VOLOTSANGANA dispose d’un show- room au CPTC Tanjombato Tongarivo et d’un bureau de liaison au sein de la Chambre de Commerce et d’Industrie d’Antananarivo (CCIA) pour la commercialisation des produits en bambou.
 Pour la promotion commerciale des produits de bambou, l’ONG VOLOTSANGANA i) participe à des foires périodiques, particulièrement le Salon de la Créativité VOATRA organisé par la CCIA, ii) organise des portes ouvertes et des ateliers thématiques et iii) des actions de recherche de marché et de marketing et des mis en relation avec des donneurs d’ordre.
 "
+    video: "/videos/reportage-2424mg-2025.mp4"
     images:
       - "/images/produits/IMG_20231028_140902_001.jpg"
       - "/images/produits/IMG_20240909_100002_987.jpg"
