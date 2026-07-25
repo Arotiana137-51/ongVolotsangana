@@ -1,5 +1,4 @@
 
-import Cta from "./components/Cta";
 import ProductCard from "./components/ProductCard";
 
 
@@ -7,7 +6,7 @@ import ProductCard from "./components/ProductCard";
 
 function Produits({ data, products }) {
   const {
-    frontmatter: { title, articles, call_to_action },
+    frontmatter: { title, articles },
   } = data;
 
 
@@ -24,7 +23,6 @@ function Produits({ data, products }) {
           </div>
         </div>
       </section>
-       <Cta cta={call_to_action} /> 
     </>
   );
 }

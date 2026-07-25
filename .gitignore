@@ -42,3 +42,6 @@ yarn-error.log*
 
 #sanity studio
 /sanityvolotsangana
+
+#ai
+.claude*

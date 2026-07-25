@@ -8,7 +8,7 @@ import "../styles/style.scss";
 
 export const metadata = {
   title: "Ong Volotsangana",
-  description: "Promoteur de l'utilisation du bambou pour la protection de l'environnement",
+  description: "Promoteur de l'utilisation du bambou",
 };
 
 export default function RootLayout({ children }) {

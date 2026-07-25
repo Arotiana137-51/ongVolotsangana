@@ -23,7 +23,14 @@ feature:
     content: "Centre de Production Commune de produits en bambou pour les transformateurs et les néo-entrepreneurs "
   - name: "Former et accompagner"
     icon: "/images/training.png"
-    content: "Centre de Formation technique et d‘appui-Conseils sur les métiers du bambou (artisanat, charbon, mobiliers et meubles en bambou, plantation du bambou, construction maison en bambou)"
+    content: "Centre de Formation et d‘Appui-Conseil sur les métiers du bambou :<br>
+      <br>•	production de jeunes plants de bambou
+      <br>•	plantation de bambou
+      <br>•	artisanat
+      <br>•	charbon de bambou
+      <br>•	mobiliers et meubles en bambou
+      <br>•	produits de menuiserie en bambou
+      <br>•	construction de maison en bambou"
   # - name: "Centre de Production Commune de produits en bambou"
   #   icon: "/images/workshop.png"
   #   content: ""
@@ -138,14 +145,4 @@ workflow:
   title: "Bambou : La nature durable, pour un avenir responsable."
   image: "/images/bamboo-banner.jpg"
   description: ""
-
-# call_to_action
-call_to_action:
-  title:  L'USAGE DU BAMBOU EST ECOLOGIQUE
-  content: Le bambou est une alternative écologique remarquable au bois traditionnel. En plus de sa croissance rapide, il peut être récolté sans endommager l’environnement, ce qui en fait une ressource renouvelable et durable. Le bambou capte jusqu’à 30% de plus de dioxyde de carbone que les arbres feuillus et libère 30% d’oxygène en plus, contribuant ainsi à la lutte contre le changement climatique. De plus, il aide à prévenir l’érosion des sols et à restaurer les terres appauvries. Utiliser le bambou comme substitut du bois permet non seulement de préserver les forêts, mais aussi de réduire notre empreinte carbone globale, tout en offrant une solution biodégradable et durable pour de nombreux produits.
-  image: '/images/eco.png'
-  button:
-    enable: true
-    label: "Contactez nous"
-    link: "/contact"
 ---

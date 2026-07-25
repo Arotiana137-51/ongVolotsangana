@@ -25,7 +25,7 @@ const HomeFeatures = ({ feature }) => {
               )}
               <div className="mt-4">
                 {markdownify(item.name, "h3", "h5")}
-                <p className="mt-3">{item.content}</p>
+                <p className="mt-3">{markdownify(item.content)}</p>
               </div>
             </div>
           ))}
