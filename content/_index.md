@@ -3,6 +3,24 @@ banner:
   title: "Ensemble, valorisons le bambou pour préserver nos forêts"
   content: "<p><strong>Qui sommes-nous ?</strong></p><p>L’ONG VOLOTSANGANA créée en 2016 a comme objectifs de promouvoir l’utilisation du bambou pour la protection de l’environnement et l’amélioration des revenus des pépiniéristes, des planteurs, des artisans et des transformateurs.</p><p>L’ONG VOLOTSANGANA est une structure relais du programme PROSPERER assurant la gestion du « Common Production and Training Center » (CPTC) qui est un centre de formation et de production commune dédié à la promotion de la filière bambou.</p><p>Le CPTC est localisé à Tanjombato-Tongarivo, district Atsimondrano de la région Analamanga de Madagascar. L’ONG Volotsangana dispose d’un bureau de liaison à la Chambre de Commerce et d’Industrie d’Antananarivo à Antaninarenina.</p>"
   image: /images/federateur/DSC00249.jpg
+  images:
+    - "/images/produits/IMG_20231028_140902_001.jpg"
+    - "/images/produits/IMG_20240909_100002_987.jpg"
+    - "/images/produits/IMG_20240909_102401_353.jpg"
+    - "/images/produits/IMG_20240909_103531_564.jpg"
+    - "/images/produits/IMG_20240909_103800_919.jpg"
+    - "/images/produits/IMG_20240909_103808_358.jpg"
+    - "/images/produits/IMG_20240909_104424_627.jpg"
+    - "/images/produits/IMG_20240909_104457_980.jpg"
+    - "/images/produits/IMG_20240909_104738_647.jpg"
+    - "/images/produits/IMG_20240909_105217_229.jpg"
+    - "/images/produits/IMG_20240909_105257_696.jpg"
+    - "/images/produits/Exposition VOATRA.png"
+    - "/images/produits/Objets artisanaux.JPG"
+    - "/images/produits/Salon321.jpg"
+    - "/images/produits/Cadres Photo_1.jpg"
+    - "/images/produits/Revêtements muraux.jpg"
+    - "/images/produits/Meuble canapé 3 places.jpg"
   button:
     enable: true
     label: "Contactez-nous"
