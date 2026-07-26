@@ -1,5 +1,7 @@
 ---
-title: Produits
+title: "Collection — mobilier et artisanat en bambou"
+meta_title: "Mobilier & artisanat en bambou — Collection Volotsangana, Madagascar"
+description: "Découvrez la collection ONG Volotsangana : mobilier, objets décoratifs, charbon et matériaux de construction en bambou, fabriqués à Madagascar (CPTC, Tanjombato)."
 layout: produits
 draft: false
 articles:

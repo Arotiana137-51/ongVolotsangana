@@ -78,8 +78,12 @@ const ImageService = ({ service, isOdd }) => (
 const Services = ({ services }) => {
   return services.map((service, index) => {
     const isOdd = index % 2 > 0;
-    const props = { key: `service-${index}`, service, isOdd };
-    return service.video ? <VideoService {...props} /> : <ImageService {...props} />;
+    const props = { service, isOdd };
+    return service.video ? (
+      <VideoService key={`service-${index}`} {...props} />
+    ) : (
+      <ImageService key={`service-${index}`} {...props} />
+    );
   });
 };
 
