@@ -113,3 +113,5 @@ If you need to customize the theme or complete website development from scratch,
 <p>Bookworm Light Nextjs</p>
 </a>
 
+Modification envoyée par Bals.
+
