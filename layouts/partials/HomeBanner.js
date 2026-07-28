@@ -15,6 +15,8 @@ const HomeBanner = ({ banner }) => {
     <section className="section pb-[50px]">
       <div className="container">
         <div className="items-center gap-8 md:grid md:grid-cols-5">
+
+          {/* Section Slider d'images */}
           <div className="service-carousel md:order-2 md:col-span-3">
             <Swiper
               modules={[Autoplay, Pagination]}
@@ -22,10 +24,9 @@ const HomeBanner = ({ banner }) => {
               pagination={slides.length > 1 ? { clickable: true } : false}
               autoplay={{ delay: 4000, disableOnInteraction: false }}
             >
-              {/* object-contain garde les proportions réelles de chaque photo */}
               {slides.map((slide, i) => (
                 <SwiperSlide key={i}>
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-theme-light">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-theme-light rounded-lg shadow-sm">
                     <Image
                       src={slide}
                       alt="produit bambou"
@@ -40,12 +41,21 @@ const HomeBanner = ({ banner }) => {
             </Swiper>
           </div>
 
+          {/* Section Texte */}
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <h1 className="font-primary font-bold">{markdownify(banner.title)}</h1>
-            {markdownify(banner.content, "div", "mt-4 text-justify")}
-            {banner.button.enable && (
+            <h1 className="font-primary font-bold text-3xl md:text-4xl text-gray-900 mb-4">
+              {markdownify(banner.title)}
+            </h1>
+
+            {/* CORRECTION : Utilisation de dangerouslySetInnerHTML pour le HTML brut */}
+            <div
+              className="banner-content space-y-4 leading-relaxed text-justify text-gray-700"
+              dangerouslySetInnerHTML={{ __html: banner.content }}
+            />
+
+            {banner.button?.enable && (
               <Link
-                className="btn btn-primary mt-4"
+                className="btn btn-primary mt-6 inline-block"
                 href={banner.button.link}
                 rel={banner.button.rel}
               >
@@ -53,6 +63,7 @@ const HomeBanner = ({ banner }) => {
               </Link>
             )}
           </div>
+
         </div>
       </div>
     </section>
