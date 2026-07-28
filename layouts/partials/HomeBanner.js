@@ -42,7 +42,7 @@ const HomeBanner = ({ banner }) => {
 
           <div className="mt-5 md:col-span-2 md:mt-0">
             <h1 className="font-primary font-bold">{markdownify(banner.title)}</h1>
-            <p className="mt-4 text-justify">{markdownify(banner.content)}</p>
+            {markdownify(banner.content, "div", "mt-4 text-justify")}
             {banner.button.enable && (
               <Link
                 className="btn btn-primary mt-4"
