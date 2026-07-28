@@ -37,10 +37,10 @@ feature:
       
     - name: "Centre de Production Commune"
       images:
-        - "/images/cptc1.jfif"
-        - "/images/cptc2.jfif"
-        - "/images/cptc3.jfif"
-        - "/images/cptc4.jfif"
+        - "/images/cptc1.jpg"
+        - "/images/cptc2.jpg"
+        - "/images/cptc3.jpg"
+        - "/images/cptc4.jpg"
       content: "Centre de Production Commune de produits en bambou pour les transformateurs, les artisans et les néo-entrepreneurs :\n• Appui technique pour la transformation du bambou : artisanat, meubles, mobiliers de bureau, menuiserie, matériaux de construction, charbon\n• Mise au point technique et production commune de produits en bambou\n• Mise à disposition des matériels et équipements\n• Mise à disposition des matières premières traitées et de qualité : bambou traité, lamelles de bambou traitées, planches de bambou traitées"
       
     - name: "Former et accompagner"
