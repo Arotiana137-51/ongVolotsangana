@@ -13,8 +13,8 @@ banner:
     - "/images/produits/IMG_20240909_104424_627.jpg"
     - "/images/produits/IMG_20240909_104457_980.jpg"
     - "/images/produits/IMG_20240909_104738_647.jpg"
-    - "/images/produits/IMG_20240909_105217_229.jpg"
-    - "/images/produits/IMG_20240909_105257_696.jpg"
+    - "/images/produits/luminaires de bambou en lamelles collées en lasure.jpg"
+    - "/images/produits/luminaire.jpeg"
     - "/images/produits/Exposition VOATRA.png"
     - "/images/produits/Objets artisanaux.JPG"
     - "/images/produits/Salon321.jpg"
@@ -30,18 +30,31 @@ banner:
 feature:
   title: "QUELLES sont nos actions ?"
   features:
-  - name: "Favoriser la plantation du bambou"
-    icon: "/images/bamboofield.png"
-    content: "Fédérateur pour la mise à l’échelle de la plantation d’envergure du bambou."
-  - name: "Centre de Production Commune"
-    icon: "/images/oop.svg"
-    content: "Centre de Production Commune de produits en bambou pour les transformateurs, les artisans et les néo-entrepreneurs :<br><br>•	Appui technique pour la transformation du bambou : artisanat, meubles, mobiliers de bureau, menuiserie, matériaux de construction, charbon<br>•	Mise au point technique et production commune de produits en bambou<br>•	Mise à disposition des matériels et équipements<br>•	Mise à disposition des matières premières traitées et de qualité : bambou traité, lamelles de bambou traitées, planches de bambou traitées"
-  - name: "Former et accompagner"
-    icon: "/images/training.png"
-    content: "Centre de Formation et d’Appui-Conseil sur les métiers du bambou :<br><br>•	Production de jeunes plants de bambou<br>•	Plantation de bambou<br>•	Artisanat<br>•	Charbon de bambou<br>•	Mobiliers et meubles en bambou<br>•	Produits de menuiserie en bambou<br>•	Construction de maison en bambou"
-  - name: "Favoriser l’accès au marché"
-    icon: "/images/sales.png"
-    content: "En collaboration avec la Chambre de Commerce et d’Industrie d’Antananarivo, l’ONG Volotsangana promeut les produits de bambou à travers le Salon de la Créativité (B2B)."
+    - name: "Favoriser la plantation du bambou"
+      images:
+        - "/images/bamboofield.png"
+      content: "Fédérateur pour la mise à l'échelle de la plantation d'envergure du bambou."
+      
+    - name: "Centre de Production Commune"
+      images:
+        - "/images/cptc1.jpg"
+        - "/images/cptc2.jpg"
+        - "/images/cptc3.jpg"
+        - "/images/cptc4.jpg"
+      content: "Centre de Production Commune de produits en bambou pour les transformateurs, les artisans et les néo-entrepreneurs :\n• Appui technique pour la transformation du bambou : artisanat, meubles, mobiliers de bureau, menuiserie, matériaux de construction, charbon\n• Mise au point technique et production commune de produits en bambou\n• Mise à disposition des matériels et équipements\n• Mise à disposition des matières premières traitées et de qualité : bambou traité, lamelles de bambou traitées, planches de bambou traitées"
+      
+    - name: "Former et accompagner"
+      images:
+        - "/images/for-1.jpg"
+        - "/images/for-2.png"
+        - "/images/for-3.png"
+      content: "Centre de Formation et d'Appui-Conseil sur les métiers du bambou :\n• Production de jeunes plants de bambou\n• Plantation de bambou\n• Artisanat\n• Charbon de bambou\n• Mobiliers et meubles en bambou\n• Produits de menuiserie en bambou\n• Construction de maison en bambou"
+      
+    - name: "Favoriser l'accès au marché"
+      images:
+        - "/images/acces_au_marche.jpg"
+        - "/images/jardin.png"
+      content: "En collaboration avec la Chambre de Commerce et d'Industrie d'Antananarivo, l'ONG Volotsangana promet les produits de bambou à travers le Salon de la Créativité (B2B)."
 
 # services
 services:

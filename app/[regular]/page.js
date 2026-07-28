@@ -15,8 +15,8 @@ const RegularPages = async ({ params }) => {
   const { title, meta_title, description, image, noindex, canonical, layout } =
     regularPageData.frontmatter;
   const { content } = regularPageData;
-  const product = await client.fetch(`*[_type == "product"]`);
- 
+  const product = await client.fetch(`*[_type == "product"]{ _id, title, description, image, images }`);
+
 
   return (
     <>
