@@ -43,6 +43,7 @@ feature:
     - name: "Favoriser la plantation du bambou"
       images:
         - "/images/jardin.png"
+        - "/images/bambou.jpg"
       content: "Fédérateur pour la mise à l'échelle de la plantation d'envergure du bambou."
       
     - name: "Centre de Production Commune"
@@ -62,7 +63,7 @@ feature:
       
     - name: "Favoriser l'accès au marché"
       images:
-        - "/images/marcher.png"
+        - "/images/marche.png"
         - "/images/acces_au_marche.jpg"
       content: "En collaboration avec la Chambre de Commerce et d'Industrie d'Antananarivo, l'ONG Volotsangana promet les produits de bambou à travers le Salon de la Créativité (B2B)."
 

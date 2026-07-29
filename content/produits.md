@@ -33,9 +33,6 @@ articles:
   image: "/images/produits/IMG_20240909_104738_647.jpg"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
 - title: Basic Plan
-  image: "/images/produits/IMG_20240909_105217_229.jpg"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
-- title: Basic Plan
   image: "/images/produits/Exposition VOATRA.png"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada."
 - title: Meuble canapé 3 places
