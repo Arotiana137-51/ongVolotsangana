@@ -5,7 +5,7 @@ banner:
   image: /images/federateur/DSC00249.jpg
   images:
     - "/images/produits/photo1.png"
-    - "/images/produits/photo2.jpg"
+    - "/images/produits/photo2.png"
     - "/images/produits/Mobiliers_de_bureau_1.jpg"
     - "/images/produits/photo4.jpg"
   button:
