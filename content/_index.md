@@ -22,7 +22,6 @@ feature:
         - "/images/bambou.jpg"
       content: |
         Fédérateur pour la mise à l'échelle de la plantation d'envergure du bambou.
-        Ressource en bambou phyllostacus à Andoharanomaintso Haute Matsiatra.
       
     - name: "Centre de Production Commune"
       images:
