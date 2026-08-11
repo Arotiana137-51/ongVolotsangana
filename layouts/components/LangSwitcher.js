@@ -1,30 +1,28 @@
 "use client";
 
+import { useRouter, usePathname } from "@i18n/navigation"; // ✅ Import CORRECT depuis next-intl
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
 
-const LangSwitcher = () => {
-  const locale = useLocale();
+export default function LangSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
+  
+  // Détermine la langue cible (si on est en FR, on vise EN, et vice-versa)
+  const nextLocale = locale === "fr" ? "en" : "fr";
 
-  const handleLangChange = () => {
-    // Bascule entre 'fr' et 'en'
-    const newLocale = locale === "fr" ? "en" : "fr";
-
-    // next-intl gère automatiquement le changement de langue tout en gardant la même page
-    router.push(pathname, { locale: newLocale });
+  const switchLocale = () => {
+    // Le router de next-intl gère automatiquement l'ajout/suppression du préfixe /en/
+    router.push(pathname, { locale: nextLocale });
   };
 
   return (
     <button
-      onClick={handleLangChange}
-      className="inline-flex items-center justify-center rounded-full border border-border/60 px-3 py-1.5 text-sm font-medium text-ink hover:bg-theme-light transition-colors"
-      aria-label="Changer de langue"
+      onClick={switchLocale}
+      className="px-4 py-2 rounded-full border-2 border-lime-700 text-lime-700 font-bold hover:bg-lime-700 hover:text-white transition-all duration-300 text-sm uppercase"
+      aria-label={`Switch to ${nextLocale}`}
     >
-      {locale === "fr" ? "EN" : "FR"}
+      {nextLocale}
     </button>
   );
-};
-
-export default LangSwitcher;
+}

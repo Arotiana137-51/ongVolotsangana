@@ -13,16 +13,16 @@ export const metadata = {
   description: "Promoteur de l'utilisation du bambou",
 };
 
-// 1. La fonction doit être "async" pour pouvoir attendre les messages
-export default async function RootLayout({ children }) {
-  // 2. Récupère automatiquement les messages (fr.json ou en.json) selon l'URL
+// ✅ La fonction doit être async et recevoir params pour récupérer la locale
+export default async function RootLayout({ children, params }) {
   const messages = await getMessages();
+  const locale = params?.locale || "fr"; // "fr" par défaut si non défini
   
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
-  
+
   return (
-    <html suppressHydrationWarning={true} lang="fr">
+    <html suppressHydrationWarning={true} lang={locale}>
       <head>
         {/* responsive meta */}
         <meta
@@ -32,7 +32,6 @@ export default async function RootLayout({ children }) {
 
         {/* favicon */}
         <link rel="shortcut icon" href={config.site.favicon} />
-        {/* theme meta */}
         <meta name="theme-name" content="Bamboo" />
 
         {/* google font css */}
@@ -48,7 +47,6 @@ export default async function RootLayout({ children }) {
           rel="stylesheet"
         />
 
-        {/* theme meta */}
         <meta name="theme-name" content="Bamboo" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
@@ -63,8 +61,8 @@ export default async function RootLayout({ children }) {
         />
       </head>
       <body suppressHydrationWarning={true}>
-        {/* 3. Enveloppe TOUT le contenu avec le Provider pour que useTranslations fonctionne */}
-        <NextIntlClientProvider messages={messages}>
+        {/* ✅ On passe locale au Provider pour que useLocale() fonctionne partout */}
+        <NextIntlClientProvider messages={messages} locale={locale}>
           <TwSizeIndicator />
           <Header />
           <Providers>{children}</Providers>
