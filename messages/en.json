@@ -1,0 +1,34 @@
+{
+  "header": {
+    "navAria": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "nav": {
+    "home": "Home",
+    "produits": "Our products",
+    "formation": "Training",
+    "contact": "Contact"
+  },
+  "product": {
+    "quote": "Get a quote"
+  },
+  "produits": {
+    "gallery_title": "BAMBOO PRODUCT GALLERY",
+    "no_products": "No products available at the moment.",
+    "eco_title": "Our products are both economical and entirely ecological",
+    "eco_text": "The Volotsangana NGO is firmly committed to a more ecological future. By implementing sustainable initiatives and raising awareness among local communities about the importance of environmental protection and the reduction of deforestation, Volotsangana works tirelessly to preserve our planet for future generations. Its mission is to promote environmentally friendly practices and foster sustainable development through concrete and educational actions."
+  },
+  "footer": {
+    "intro_home_title": "The Volotsangana NGO is open to all proposals:",
+    "intro_home_list": "- orders for bamboo products\n- orders for customized bamboo products\n- and training requests for bamboo professions.",
+    "intro_home_outro": "Do not hesitate to contact us at:",
+    
+    "intro_formation_title": "The Volotsangana NGO is open to training requests for bamboo professions to promote the bamboo value chain in Madagascar.",
+    "intro_formation_outro": "Do not hesitate to contact us at:",
+    
+    "intro_products_title": "The Volotsangana NGO is open to all proposals:",
+    "intro_products_list": "- orders for bamboo products\n- orders for customized bamboo products.",
+    "intro_products_outro": "Do not hesitate to contact us at:"
+  }
+}

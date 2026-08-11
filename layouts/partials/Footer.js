@@ -1,78 +1,48 @@
 "use client";
 
-import Social from "@components/Social";
 import config from "@config/config.json";
 import menu from "@config/menu.json";
-import social from "@config/social.json";
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const { copyright, footer_content } = config.params;
   const { footer } = menu;
   const pathname = usePathname();
+  
+  const tFooter = useTranslations("footer");
 
-  // Fonction qui retourne les 3 parties du texte (intro, liste, outro)
-  const getFooterData = () => {
-    const outro = `<strong>N’hésitez pas à nous contacter au :</strong>`;
-
-    // Page Formation
-    if (pathname?.startsWith("/formation")) {
-      return {
-        intro: "L’ONG Volotsangana est ouvert à des demandes de formation sur les métiers du bambou pour la promotion de la chaîne de valeur bambou à Madagascar.",
-        list: null, // Pas de liste pour la formation
-        outro: outro,
-      };
-    }
-
-    // Page Produits
-    if (pathname?.startsWith("/produits") || pathname?.startsWith("/products")) {
-      return {
-        intro: "L’ONG Volotsangana est ouvert à toutes propositions :",
-        list: "- de commandes de produits en bambou<br>- de commandes de produits personnalisés en bambou",
-        outro: outro,
-      };
-    }
-
-    // Page d'Accueil (par défaut)
-    return {
-      intro: "L’ONG Volotsangana est ouvert à toutes propositions :",
-      list: "- de commandes de produits en bambou<br>- de commandes de produits personnalisés en bambou<br>- et à des demandes de formation sur les métiers du bambou.",
-      outro: outro,
-    };
-  };
-
-  const data = getFooterData();
+  const isFormation = pathname?.includes("/formation");
+  const isProduits = pathname?.includes("/produits") || pathname?.includes("/products");
 
   return (
     <footer className="section bg-theme-light pb-0">
       <div className="container">
-
-        {/* Texte d'introduction avec alignement mixte */}
         <div className="row mb-12">
           <div className="col-12">
             <div className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700">
+              
+              <p className="text-center mb-2">
+                {isFormation ? tFooter("intro_formation_title") : tFooter("intro_home_title")}
+              </p>
 
-              {/* 1. Introduction : CENTRÉE */}
-              <p className="text-center mb-2">{data.intro}</p>
-
-              {/* 2. Liste à tirets : ALIGNÉE À GAUCHE mais prend TOUTE la largeur pour ne pas couper le texte */}
-              {data.list && (
-                <div className="text-left w-full my-3">
-                  <div dangerouslySetInnerHTML={{ __html: data.list }} />
+              {!isFormation && (
+                <div className="text-left w-full my-3 whitespace-pre-line">
+                  {isProduits ? tFooter("intro_products_list") : tFooter("intro_home_list")}
                 </div>
               )}
 
-              {/* 3. Conclusion : CENTRÉE */}
-              <p className="text-center mt-2" dangerouslySetInnerHTML={{ __html: data.outro }} />
+              <p className="text-center mt-2 font-bold">
+                {isFormation ? tFooter("intro_formation_outro") : tFooter("intro_home_outro")}
+              </p>
 
             </div>
           </div>
         </div>
 
-        {/* Menu footer et logo */}
         <div className="row">
           {footer.map((col) => {
             return (
@@ -92,7 +62,7 @@ const Footer = () => {
           })}
 
           <div className="md-12 sm:col-6 lg:col-3">
-            <Link href="/" aria-label="ngo volotsangana lobo">
+            <Link href="/" aria-label="ngo volotsangana logo">
               <Image
                 src={config.site.logo}
                 width={config.site.logo_width}
@@ -104,7 +74,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="border-t border-border py-6">
           {markdownify(copyright, "p", "text-sm text-center")}
         </div>

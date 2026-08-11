@@ -4,6 +4,8 @@ import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import "../styles/style.scss";
 
 export const metadata = {
@@ -11,11 +13,16 @@ export const metadata = {
   description: "Promoteur de l'utilisation du bambou",
 };
 
-export default function RootLayout({ children }) {
+// 1. La fonction doit être "async" pour pouvoir attendre les messages
+export default async function RootLayout({ children }) {
+  // 2. Récupère automatiquement les messages (fr.json ou en.json) selon l'URL
+  const messages = await getMessages();
+  
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
+  
   return (
-    <html suppressHydrationWarning={true} lang="en">
+    <html suppressHydrationWarning={true} lang="fr">
       <head>
         {/* responsive meta */}
         <meta
@@ -56,10 +63,13 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body suppressHydrationWarning={true}>
-        <TwSizeIndicator />
-        <Header />
-        <Providers>{children}</Providers>
-        <Footer />
+        {/* 3. Enveloppe TOUT le contenu avec le Provider pour que useTranslations fonctionne */}
+        <NextIntlClientProvider messages={messages}>
+          <TwSizeIndicator />
+          <Header />
+          <Providers>{children}</Providers>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
