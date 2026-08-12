@@ -1,11 +1,11 @@
 ---
 banner:
-  title: "Together, let's promote bamboo to protect our forests"
+  title: "Let's work together to make the most of bamboo to preserve our forests"
   content: "<p><strong>Who are we?</strong></p><p>Founded in 2016, the NGO VOLOTSANGANA aims to promote the use of bamboo for environmental protection while improving the incomes of nursery operators, growers, artisans, and bamboo processors.</p><p>VOLOTSANGANA serves as the implementing organization for the PROSPERER program by managing the Common Production and Training Center (CPTC), a training and shared production center dedicated to promoting the bamboo value chain.</p><p>The CPTC is located in Tanjombato-Tongarivo, Atsimondrano District, Analamanga Region, Madagascar.</p><p>VOLOTSANGANA also operates a liaison office at the Antananarivo Chamber of Commerce and Industry (CCIA) in Antaninarenina.</p>"
   image: /images/federateur/DSC00249.jpg
   images:
     - "/images/produits/photo1.png"
-    - "/images/produits/photo2.jpg"
+    - "/images/produits/photo2.png"
     - "/images/produits/Mobiliers_de_bureau_1.jpg"
     - "/images/produits/photo4.jpg"
   button:

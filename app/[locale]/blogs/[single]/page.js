@@ -1,26 +1,23 @@
-import config from "@config/config.json";
+import { notFound } from "next/navigation";
+import SeoMeta from "@layouts/SeoMeta";
 import PostSingle from "@layouts/PostSingle";
 import { getSinglePage } from "@lib/contentParser";
-const { blog_folder } = config.settings;
 
-// post single layout
-const Article = async ({ params }) => {
+export default async function PostSinglePage({ params }) {
+  const locale = params.locale || "fr";
   const { single } = params;
-  const posts = await getSinglePage(`content/${blog_folder}`);
-  const post = posts.filter((p) => p.slug == single);
-  const { frontmatter, content } = post[0];
+  
+  const posts = await getSinglePage("content/blogs", locale);
+  const postData = posts.find((post) => post.slug === single);
 
-  return <PostSingle frontmatter={frontmatter} content={content} />;
-};
+  if (!postData) {
+    return notFound();
+  }
 
-// get post single slug
-export const generateStaticParams = () => {
-  const allSlug = getSinglePage(`content/${blog_folder}`);
-  const paths = allSlug.map((item) => ({
-    single: item.slug,
-  }));
-
-  return paths;
-};
-
-export default Article;
+  return (
+    <>
+      <SeoMeta {...postData.frontmatter} />
+      <PostSingle data={postData} />
+    </>
+  );
+}

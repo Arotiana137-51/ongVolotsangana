@@ -16,17 +16,15 @@
   "produits": {
     "gallery_title": "GALERIE DE PRODUITS EN BAMBOU",
     "no_products": "Aucun produit disponible pour le moment.",
-    "eco_title": "Nos produits sont à la fois économiques et entièrement écologiques",
-    "eco_text": "L’ONG Volotsangana s’engage fermement pour un avenir plus écologique. En mettant en œuvre des initiatives durables et en sensibilisant les communautés locales à l’importance de la protection de l’environnement et à la réduction de la déforestation, Volotsangana travaille sans relâche pour préserver notre planète pour les générations futures. Leur mission est de promouvoir des pratiques respectueuses de l’environnement et de favoriser un développement durable à travers des actions concrètes et éducatives."
+    "eco_title": "Nos produits sont à la fois économiques et écologiques",
+    "eco_text": "L’ONG Volotsangana s’engage fermement pour un avenir plus écologique. En mettant en œuvre des initiatives durables et en sensibilisant les communautés locales à l’importance de la protection de l’environnement et à la réduction de la déforestation. "
   },
   "footer": {
     "intro_home_title": "L’ONG Volotsangana est ouvert à toutes propositions :",
     "intro_home_list": "- de commandes de produits en bambou\n- de commandes de produits personnalisés en bambou\n- et à des demandes de formation sur les métiers du bambou.",
     "intro_home_outro": "N’hésitez pas à nous contacter au :",
-    
     "intro_formation_title": "L’ONG Volotsangana est ouvert à des demandes de formation sur les métiers du bambou pour la promotion de la chaîne de valeur bambou à Madagascar.",
     "intro_formation_outro": "N’hésitez pas à nous contacter au :",
-    
     "intro_products_title": "L’ONG Volotsangana est ouvert à toutes propositions :",
     "intro_products_list": "- de commandes de produits en bambou\n- de commandes de produits personnalisés en bambou.",
     "intro_products_outro": "N’hésitez pas à nous contacter au :"

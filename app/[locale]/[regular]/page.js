@@ -1,56 +1,50 @@
-import NotFound from "@layouts/404";
-import Contact from "@layouts/Contact";
+import { notFound, redirect } from "next/navigation";
 import Default from "@layouts/Default";
-import Faq from "@layouts/Faq";
 import Produits from "@layouts/Produits";
+import Contact from "@layouts/Contact";
+import Faq from "@layouts/Faq";
 import SeoMeta from "@layouts/SeoMeta";
-import { getRegularPage, getSinglePage } from "@lib/contentParser";
-import client from '../../sanity';
+import { getRegularPage } from "@lib/contentParser";
+import client from "../../../sanity"; // 3 niveaux vers le haut
 
+export default async function RegularPage({ params }) {
+  const { locale, regular } = params;
 
-// for all regular pages
-const RegularPages = async ({ params }) => {
-  const { regular } = params;
-  const regularPageData = await getRegularPage(regular);
-  const { title, meta_title, description, image, noindex, canonical, layout } =
-    regularPageData.frontmatter;
-  const { content } = regularPageData;
-  const product = await client.fetch(`*[_type == "product"]{ _id, title, description, image, images }`);
+  // ✅ 1. VALIDATION STRICTE DE LA LOCALE
+  // Si l'URL est du type /produits/formation, "produits" est pris pour la locale.
+  // On détecte l'erreur et on redirige proprement vers la page réelle (/formation)
+  if (locale !== "fr" && locale !== "en") {
+    redirect(`/${regular}`); 
+  }
 
+  // 2. Récupération des données
+  const pageData = await getRegularPage(regular, locale);
+  const { frontmatter } = pageData;
 
+  // Si la page n'existe pas dans le dossier content/
+  if (!frontmatter) {
+    return notFound();
+  }
+
+  // ✅ 3. ROUTING DES LAYOUTS SPÉCIFIQUES
+  if (frontmatter.layout === "contact") {
+    return <Contact data={pageData} />;
+  }
+  
+  if (frontmatter.layout === "faq") {
+    return <Faq data={pageData} />;
+  }
+
+  if (frontmatter.layout === "produits") {
+    const products = await client.fetch(`*[_type == "product"]`);
+    return <Produits data={pageData} products={products} />;
+  }
+
+  // 4. FALLBACK PAR DÉFAUT (ex: formation, elements, etc.)
   return (
     <>
-      <SeoMeta
-        title={title}
-        description={description ? description : content.slice(0, 120)}
-        meta_title={meta_title}
-        image={image}
-        noindex={noindex}
-        canonical={canonical}
-      />
-      {layout === "404" ? (
-        <NotFound data={regularPageData} />
-      ) : layout === "contact" ? (
-        <Contact data={regularPageData} />
-      ) : layout === "produits" ? (
-        <Produits data={regularPageData} products={product} />
-      ) : layout === "faq" ? (
-        <Faq data={regularPageData} />
-      ) : (
-        <Default data={regularPageData} />
-      )}
+      <SeoMeta {...frontmatter} />
+      <Default data={pageData} />
     </>
   );
-};
-export default RegularPages;
-
-// for regular page routes
-export const generateStaticParams = async () => {
-  const allslugs = await getSinglePage("content");
-  const slugs = allslugs.map((item) => item.slug);
-  const paths = slugs.map((slug) => ({
-    regular: slug,
-  }));
-
-  return paths;
-};
+}

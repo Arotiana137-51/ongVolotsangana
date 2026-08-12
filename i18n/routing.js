@@ -1,8 +1,10 @@
-import { defineRouting } from "next-intl/routing";
+import { defineRouting } from 'next-intl/routing';
+import { createNavigation } from 'next-intl/navigation';
 
-// French stays at the root (/produits), English lives under /en (/en/produits).
 export const routing = defineRouting({
-  locales: ["fr", "en"],
-  defaultLocale: "fr",
-  localePrefix: "as-needed",
+  locales: ['fr', 'en'],
+  defaultLocale: 'fr',
+  localePrefix: 'as-needed',
 });
+
+export const { Link, redirect, usePathname, useRouter } = createNavigation(routing);
