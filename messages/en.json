@@ -6,8 +6,8 @@
   },
   "nav": {
     "home": "Home",
-    "produits": "Our products",
     "formation": "Training",
+    "produits": "Products",
     "contact": "Contact"
   },
   "product": {
@@ -27,11 +27,14 @@
     "intro_formation_outro": "Please do not hesitate to contact us at:",
     "intro_products_title": "The NGO Volotsangana welcomes all enquiries regarding:",
     "intro_products_list": "- orders for bamboo products\n- orders for personalised bamboo products.",
-    "intro_products_outro": "Please do not hesitate to contact us at:"
+    "intro_products_outro": "Please do not hesitate to contact us at:",
+    "liaison": "Liaison Office:",
+    "factory": "Factory:",
+    "phone": "Phone:"
   },
-    "contact": {
+  "contact": {
     "placeholder_name": "Name",
-    "placeholder_email": "Your email",
+    "placeholder_email": "Your email address",
     "placeholder_subject": "Subject",
     "placeholder_message": "Your message",
     "submit_button": "Send now",
