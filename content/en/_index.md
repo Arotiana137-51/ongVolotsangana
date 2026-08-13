@@ -1,7 +1,7 @@
 ---
 banner:
   title: "Let's work together to make the most of bamboo to preserve our forests"
-  content: "<p><strong>Who are we?</strong></p><p>Founded in 2016, the NGO VOLOTSANGANA aims to promote the use of bamboo for environmental protection while improving the incomes of nursery operators, growers, artisans, and bamboo processors.</p><p>VOLOTSANGANA serves as the implementing organization for the PROSPERER program by managing the Common Production and Training Center (CPTC), a training and shared production center dedicated to promoting the bamboo value chain.</p><p>The CPTC is located in Tanjombato-Tongarivo, Atsimondrano District, Analamanga Region, Madagascar.</p><p>VOLOTSANGANA also operates a liaison office at the Antananarivo Chamber of Commerce and Industry (CCIA) in Antaninarenina.</p>"
+  content: "<p><strong>Who are we?</strong></p><p>The NGO VOLOTSANGANA, founded in 2016, aims to promote the use of bamboo to protect the environment and improve the incomes of nursery owners, growers, craftspeople and processors.</p><p>The NGO VOLOTSANGANA acts as a liaison organisation for the PROSPERER programme, managing the 'Common Production and Training Centre' (CPTC), a joint training and production centre dedicated to promoting the bamboo sector.</p><p>The CPTC is located in Tanjombato-Tongarivo, in the Atsimondrano district of the Analamanga region of Madagascar.</p><p>The NGO Volotsangana has a liaison office at the Antananarivo Chamber of Commerce and Industry in Antaninarenina.</p>"
   image: /images/federateur/DSC00249.jpg
   images:
     - "/images/produits/photo1.png"
@@ -10,32 +10,31 @@ banner:
     - "/images/produits/photo4.jpg"
   button:
     enable: true
-    label: "Contact Us"
+    label: "Contact us"
     link: "/contact"
 
 feature:
-  title: "WHAT ARE OUR ACTIVITIES?"
+  title: "WHAT are our activities?"
   features:
     - name: "Promoting Bamboo Cultivation"
       images:
         - "/images/jardin.png"
         - "/images/bambou.jpg"
       content: |
-        Coordinating and scaling up large-scale bamboo plantations.
-        Phyllostachys bamboo resource located in Andoharanomaintso, Haute Matsiatra.
+        A unifying force for scaling up large-scale bamboo planting.
 
-    - name: "Common Production Center"
+    - name: "Common Production Centre"
       images:
         - "/images/cptc1.jpg"
         - "/images/cptc2.jpg"
         - "/images/cptc3.jpg"
         - "/images/cptc4.jpg"
       content: |
-        Shared Production Center for bamboo products serving processors, artisans, and new entrepreneurs:
-        - Technical support for bamboo processing: handicrafts, furniture, office furniture, carpentry, construction materials, and bamboo charcoal
-        - Technical development and shared production of bamboo products
-        - Access to machinery and equipment
-        - Supply of high-quality treated raw materials: treated bamboo poles, treated bamboo strips, and treated bamboo boards
+        Common Production Centre for bamboo products serving processors, craftspeople and new entrepreneurs:
+        - -Technical support for bamboo processing: handicrafts, furniture, office furniture, joinery, construction materials, charcoal
+        - -Technical development and joint production of bamboo products
+        - -Provision of machinery and equipment
+        - -Provision of high-quality treated raw materials: treated bamboo, treated bamboo strips, treated bamboo boards
 
     - name: "Training and Support"
       images:
@@ -43,35 +42,35 @@ feature:
         - "/images/for-2.png"
         - "/images/for-3.png"
       content: |
-        Training and Advisory Center for Bamboo Professions:
-        - Bamboo seedling production
-        - Bamboo plantation management
-        - Bamboo handicrafts
-        - Bamboo charcoal production
-        - Bamboo furniture manufacturing
-        - Bamboo carpentry products
-        - Bamboo house construction
+        Training and Advisory Centre for the bamboo trades:
+        - -Production of bamboo seedlings
+        - -Bamboo planting
+        - -Craftsmanship
+        - -Bamboo charcoal
+        - -Bamboo furniture and furnishings
+        - -Bamboo joinery products
+        - -Construction of bamboo houses
 
     - name: "Facilitating Market Access"
       images:
         - "/images/marche.png"
         - "/images/acces_au_marche.jpg"
-      content: "In collaboration with the Antananarivo Chamber of Commerce and Industry (CCIA), VOLOTSANGANA promotes bamboo products through the Creativity Fair (B2B)."
+      content: "In collaboration with the Antananarivo Chamber of Commerce and Industry, the NGO Volotsangana promotes bamboo products through the Creativity Fair (B2B)."
 
 services:
-  - title: "Coordinating Large-Scale Bamboo Plantation Development"
-    content: "Bamboo is a strategic renewable resource with multiple applications that contributes to sustainable development. VOLOTSANGANA acts as a coordinating organization to strengthen and expand large-scale bamboo plantation initiatives in partnership with the private and public sectors, decentralized local authorities, and especially the Regional Directorates for Environment and Sustainable Development."
+  - title: "A unifying force for scaling up large-scale bamboo planting"
+    content: "Bamboo is a strategic, multi-purpose renewable resource linked to sustainable development. The NGO Volotsangana acts as a coordinating body to consolidate and develop large-scale bamboo planting activities, in partnership with the private and public sectors, local authorities and, in particular, the Regional Directorates for the Environment and Sustainable Development."
     images:
       - "/images/federateur/DSC06632.JPG"
       - "/images/federateur/IMG_5574.JPG"
       - "/images/federateur/DSC06643.JPG"
     button:
       enable: true
-      label: "Contact Us"
+      label: "Contact us"
       link: /contact
 
-  - title: "Technical Training Center and Advisory Services for Bamboo Professions"
-    content: "As a specialized training center for bamboo-related professions, the CPTC has developed Activity, Competency, and Training Standards. Through the CPTC, VOLOTSANGANA provides training and technical advisory services to stakeholders across the bamboo value chain, including nursery operators, growers, artisans, processors, start-up entrepreneurs, and established businesses."
+  - title: "Technical training centre providing services and advisory support for the bamboo sector"
+    content: "As a training centre specialising in the bamboo sector, the CPTC has established Activity, Competence and Training Frameworks. Through the CPTC, the NGO VOLOTSANGANA provides training and advisory support to stakeholders in the bamboo sector (nursery owners, growers, craftspeople, processors, new entrepreneurs, entrepreneurs, etc.)."
     images:
       - "/images/servtech/ConstructionDôme.png"
       - "/images/servtech/Image2.png"
@@ -86,11 +85,11 @@ services:
       - "/images/centreforma/formation5.jpg"
     button:
       enable: true
-      label: "Contact Us"
+      label: "Contact us"
       link: /contact
 
-  - title: "Marketing and Promotion of Bamboo Products"
-    content: "In collaboration with the Antananarivo Chamber of Commerce and Industry (CCIA), VOLOTSANGANA promotes bamboo products through: (i) trade fairs and exhibitions (sales exhibitions and B2B events), particularly the VOATRA Creativity Fair organized by the CCIA; (ii) open house events and thematic workshops; and (iii) market research and marketing initiatives."
+  - title: "Marketing of bamboo products"
+    content: "In collaboration with the Antananarivo Chamber of Commerce and Industry (CCIA), the NGO Volotsangana promotes bamboo products through i) trade shows and fairs (sales exhibitions, B2B), particularly the VOATRA Creativity Fair organised by the CCIA; ii) open days and themed workshops; and iii) market research and marketing initiatives."
     video: "/videos/reportage-2424mg-2025.mp4"
     images:
       - "/images/produits/IMG_20240909_102401_353.jpg"
@@ -104,11 +103,11 @@ services:
       - "/images/produits/Meuble canapé 3 places.jpg"
     button:
       enable: true
-      label: "Contact Us"
+      label: "Contact us"
       link: /contact
 
 workflow:
-  title: "Bamboo: Sustainable by Nature, for a Responsible Future."
+  title: "Bamboo: Sustainable nature, for a responsible future."
   image: "/images/bamboo-banner.jpg"
   description: ""
 ---

@@ -11,22 +11,31 @@
     "contact": "Contact"
   },
   "product": {
-    "quote": "A quote?"
+    "quote": "A quote ?"
   },
   "produits": {
     "gallery_title": "BAMBOO PRODUCT GALLERY",
     "no_products": "No products available at the moment.",
-    "eco_title": "Our products are both economical and ecological",
-    "eco_text": "The Volotsangana NGO is firmly committed to a more ecological future. By implementing sustainable initiatives and raising awareness among local communities about the importance of environmental protection and the reduction of deforestation." 
+    "eco_title": "Our products are both cost-effective and environmentally friendly",
+    "eco_text": "The NGO Volotsangana is firmly committed to a greener future. It does this by implementing sustainable initiatives and raising awareness amongst local communities about the importance of protecting the environment and reducing deforestation."
   },
   "footer": {
-    "intro_home_title": "The Volotsangana NGO is open to all proposals:",
-    "intro_home_list": "- orders for bamboo products\n- orders for customized bamboo products\n- and training requests for bamboo professions.",
-    "intro_home_outro": "Do not hesitate to contact us at:",
-    "intro_formation_title": "The Volotsangana NGO is open to training requests for bamboo professions to promote the bamboo value chain in Madagascar.",
-    "intro_formation_outro": "Do not hesitate to contact us at:",
-    "intro_products_title": "The Volotsangana NGO is open to all proposals:",
-    "intro_products_list": "- orders for bamboo products\n- orders for customized bamboo products.",
-    "intro_products_outro": "Do not hesitate to contact us at:"
+    "intro_home_title": "The NGO Volotsangana welcomes all proposals:",
+    "intro_home_list": "- for orders of bamboo products\n- for orders of personalised bamboo products\n- and for requests for training in bamboo crafts.",
+    "intro_home_outro": "Please do not hesitate to contact us at:",
+    "intro_formation_title": "The NGO Volotsangana welcomes requests for training in bamboo-related trades to promote the bamboo value chain in Madagascar.",
+    "intro_formation_outro": "Please do not hesitate to contact us at:",
+    "intro_products_title": "The NGO Volotsangana welcomes all enquiries regarding:",
+    "intro_products_list": "- orders for bamboo products\n- orders for personalised bamboo products.",
+    "intro_products_outro": "Please do not hesitate to contact us at:"
+  },
+    "contact": {
+    "placeholder_name": "Name",
+    "placeholder_email": "Your email",
+    "placeholder_subject": "Subject",
+    "placeholder_message": "Your message",
+    "submit_button": "Send now",
+    "success_message": "Email sent successfully!",
+    "error_message": "Email not sent."
   }
 }

@@ -1,27 +1,27 @@
 ---
-title: "Technical Training Center and Advisory Services for Bamboo Professions"
-meta_title: "Bamboo Skills Training — CPTC, VOLOTSANGANA NGO Madagascar"
-description: "The CPTC of VOLOTSANGANA NGO provides training and technical advisory services on bamboo professions in Madagascar, including plantation management, bamboo charcoal production, furniture manufacturing, construction, carpentry, and laminated bamboo products."
+title: "Technical training centre providing services and advisory support for the bamboo industry"
+meta_title: "Bamboo Skills Training — CPTC, NGO Volotsangana Madagascar"
+description: "The CPTC of the NGO Volotsangana provides training and advisory support on bamboo trades in Madagascar: planting, charcoal, furniture, construction, joinery, glued strips."
 draft: false
 ---
 
-As a specialized training center dedicated to bamboo professions, the CPTC has developed comprehensive Activity, Competency, and Training Standards.
+As a training centre specialising in the bamboo industry, the CPTC has Activity, Competence and Training Frameworks.
 
-Through the CPTC, VOLOTSANGANA NGO provides training programs and technical advisory services to stakeholders across the bamboo value chain, including nursery operators, bamboo growers, artisans, processors, start-up entrepreneurs, and established businesses.
+Through the CPTC, the NGO VOLOTSANGANA provides training and advisory support to stakeholders in the bamboo sector (nursery owners, growers, craftspeople, processors, new entrepreneurs, entrepreneurs, etc.).
 
-## Activity, Competency, and Training Standards
+## Activity, competence and training frameworks
 
-1. Bamboo seedling production
-2. Bamboo plantation management
-3. Bamboo charcoal and charcoal pellet production
-4. Bamboo furniture and office furnishing manufacturing
-5. Bamboo house construction
-6. Bamboo carpentry and woodworking products
+- Framework 1: Production of bamboo seedlings
+- Framework 2: Bamboo planting
+- Framework 3: Production of bamboo charcoal and charcoal briquettes
+- Framework 4: Manufacture of bamboo furniture and furnishings
+- Framework 5: Construction of bamboo houses
+- Standard 6: Production of bamboo joinery products
 
-## Technical Services and Advisory Support
+## Services and consultancy support
 
-- Treatment of bamboo poles and bamboo strips
+- Processing of bamboo and bamboo strips
 - Production of bamboo strips
-- Application of laminated bamboo materials
-- Development of innovative product design prototypes
-- Technical guidance for the development and improvement of bamboo products
+- Use of glued strips
+- Development of prototypes for design and innovation products
+- Guidance on the technical development of bamboo products

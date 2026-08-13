@@ -1,75 +1,33 @@
 {
   "main": [
-    {
-      "name": "Home",
-      "url": "/"
-    },
-
-    {
-      "name": "Formation",
-      "url": "/formation"
-    },
-    {
-      "name": "Produits",
-      "url": "/produits"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
-    }
+    { "name": "Home", "url": "/" },
+    { "name": "Training", "url": "/formation" },
+    { "name": "Products", "url": "/produits" },
+    { "name": "Contact", "url": "/contact" }
   ],
-
   "footer": [
     {
-      "name": "Bureau de liaison:",
+      "name": "Liaison Office:",
       "menu": [
-        {
-          "text": "Chambre de Commerce et d\u2019Industrie d\u2019Antananarivo (CCIA)- R-1",
-          "url": "#"
-        },
-        {
-          "text": "20, rue Henry RAZANATSEHENO",
-          "url": "#"
-        },
-        {
-          "text": "Antaninarenina- Antananarivo 101 - Madagascar",
-          "url": "#"
-        }
-
+        { "text": "Antananarivo Chamber of Commerce and Industry (CCIA) – R-1", "url": "#" },
+        { "text": "20, rue Henry RAZANATSEHENO", "url": "#" },
+        { "text": "Antaninarenina, Antananarivo 101, Madagascar", "url": "#" }
       ]
     },
     {
-      "name": "Usine:",
+      "name": "Factory:",
       "menu": [
-        {
-          "text": "Tanjombato- Tongarivo",
-          "url": "#"
-        },
-        {
-          "text": "Antananarivo 101-Madagascar",
-          "url": "#"
-        }
-
+        { "text": "Tanjombato, Tongarivo", "url": "#" },
+        { "text": "Antananarivo 101, Madagascar", "url": "#" }
       ]
     },
     {
-      "name": "Telephone:",
+      "name": "Phone:",
       "menu": [
-        {
-          "text": " (+261) 34 14 220 00",
-          "url": "#"
-        },
-        {
-          "text": "(+261) 32 74 024 76",
-          "url": "#"
-        },
-        {
-          "text": "(+261) 34 44 970 69",
-          "url": "#"
-        }
+        { "text": "(+261) 34 14 220 00", "url": "#" },
+        { "text": "(+261) 32 74 024 76", "url": "#" },
+        { "text": "(+261) 34 44 970 69", "url": "#" }
       ]
     }
   ]
 }
-
-

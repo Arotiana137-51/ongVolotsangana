@@ -28,5 +28,14 @@
     "intro_products_title": "L’ONG Volotsangana est ouvert à toutes propositions :",
     "intro_products_list": "- de commandes de produits en bambou\n- de commandes de produits personnalisés en bambou.",
     "intro_products_outro": "N’hésitez pas à nous contacter au :"
+  },
+    "contact": {
+    "placeholder_name": "Nom",
+    "placeholder_email": "Votre email",
+    "placeholder_subject": "Objet",
+    "placeholder_message": "Votre message",
+    "submit_button": "Envoyez maintenant",
+    "success_message": "Email envoyé avec succès !",
+    "error_message": "Email non envoyé."
   }
 }

@@ -1,32 +1,34 @@
 import { notFound, redirect } from "next/navigation";
-import Default from "@layouts/Default";
-import Produits from "@layouts/Produits";
+import NotFound from "@layouts/404";
 import Contact from "@layouts/Contact";
+import Default from "@layouts/Default";
 import Faq from "@layouts/Faq";
+import Produits from "@layouts/Produits";
 import SeoMeta from "@layouts/SeoMeta";
 import { getRegularPage } from "@lib/contentParser";
-import client from "../../../sanity"; // 3 niveaux vers le haut
+import client from "../../../sanity"; // 3 niveaux vers le haut (root)
+
+// ✅ CORRECTION 1 : Force Next.js à toujours re-générer cette page au lieu d'utiliser le cache
+export const dynamic = 'force-dynamic';
 
 export default async function RegularPage({ params }) {
   const { locale, regular } = params;
 
-  // ✅ 1. VALIDATION STRICTE DE LA LOCALE
-  // Si l'URL est du type /produits/formation, "produits" est pris pour la locale.
-  // On détecte l'erreur et on redirige proprement vers la page réelle (/formation)
+  // ✅ CORRECTION 2 : Validation stricte de la locale pour éviter les URLs bizarres (/produits/formation)
   if (locale !== "fr" && locale !== "en") {
-    redirect(`/${regular}`); 
+    redirect(`/${regular}`);
   }
 
-  // 2. Récupération des données
+  // Récupération des données de la page (Markdown)
   const pageData = await getRegularPage(regular, locale);
   const { frontmatter } = pageData;
 
-  // Si la page n'existe pas dans le dossier content/
+  // Si la page n'existe pas, on affiche la 404
   if (!frontmatter) {
-    return notFound();
+    return <NotFound data={pageData} />;
   }
 
-  // ✅ 3. ROUTING DES LAYOUTS SPÉCIFIQUES
+  // ✅ ROUTING DES LAYOUTS SPÉCIFIQUES
   if (frontmatter.layout === "contact") {
     return <Contact data={pageData} />;
   }
@@ -36,11 +38,12 @@ export default async function RegularPage({ params }) {
   }
 
   if (frontmatter.layout === "produits") {
+    // Récupération des produits Sanity (toujours frais grâce à force-dynamic)
     const products = await client.fetch(`*[_type == "product"]`);
     return <Produits data={pageData} products={products} />;
   }
 
-  // 4. FALLBACK PAR DÉFAUT (ex: formation, elements, etc.)
+  // Fallback pour les pages standards (ex: formation, elements, etc.)
   return (
     <>
       <SeoMeta {...frontmatter} />

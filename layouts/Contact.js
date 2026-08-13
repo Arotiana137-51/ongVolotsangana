@@ -3,11 +3,15 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { useState } from 'react';
-import client from '@sanity/client';
+import { useTranslations } from "next-intl";
+
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
+
+  // ✅ Récupération des traductions pour le formulaire
+  const tContact = useTranslations("contact");
 
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
@@ -16,7 +20,6 @@ const Contact = ({ data }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -26,21 +29,20 @@ const Contact = ({ data }) => {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(formData), 
+        body: JSON.stringify(formData),
       });
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        alert('Email envoyé avec succès!');
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert(tContact("success_message"));
       } else {
-        alert('Email non envoyé.');
+        alert(tContact("error_message"));
       }
     } catch (error) {
-      alert('Error sending email: ' + error.message);
+      alert(tContact("error_message") + ' ' + error.message);
     }
   };
-  
 
   return (
     <section className="section">
@@ -54,7 +56,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full rounded"
                   name="name"
                   type="text"
-                  placeholder="Nom"
+                  placeholder={tContact("placeholder_name")}
                   onChange={handleChange}
                   required
                 />
@@ -64,7 +66,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full rounded"
                   name="email"
                   type="email"
-                  placeholder="Votre email"
+                  placeholder={tContact("placeholder_email")}
                   onChange={handleChange}
                   required
                 />
@@ -74,7 +76,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full rounded"
                   name="subject"
                   type="text"
-                  placeholder="Objet"
+                  placeholder={tContact("placeholder_subject")}
                   onChange={handleChange}
                   required
                 />
@@ -84,13 +86,13 @@ const Contact = ({ data }) => {
                   className="form-textarea w-full rounded-md"
                   rows="7"
                   name="message"
-                  placeholder="Votre message"
+                  placeholder={tContact("placeholder_message")}
                   onChange={handleChange}
                   required
                 />
               </div>
               <button type="submit" className="btn btn-primary">
-                Envoyez maintenant
+                {tContact("submit_button")}
               </button>
             </form>
           </div>
