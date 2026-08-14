@@ -1,20 +1,24 @@
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import NotFound from "@layouts/404";
 import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
 import Faq from "@layouts/Faq";
 import Produits from "@layouts/Produits";
 import SeoMeta from "@layouts/SeoMeta";
-import { getRegularPage } from "@lib/contentParser";
+import { getRegularPage, getSinglePage } from "@lib/contentParser";
+import { routing } from "@i18n/routing";
 import client from "../../../sanity"; // 3 niveaux vers le haut (root)
 
-// ✅ CORRECTION 1 : Force Next.js à toujours re-générer cette page au lieu d'utiliser le cache
-export const dynamic = 'force-dynamic';
+// ✅ Pages pré-générées au build (rapide), puis rafraîchies automatiquement
+// toutes les heures en arrière-plan (ISR) sans jamais bloquer le visiteur.
+// Remplace l'ancien "force-dynamic" qui forçait un recalcul complet
+// (lecture disque + appel Sanity) à CHAQUE visite.
+export const revalidate = 3600; // 1 heure
 
 export default async function RegularPage({ params }) {
   const { locale, regular } = params;
 
-  // ✅ CORRECTION 2 : Validation stricte de la locale pour éviter les URLs bizarres (/produits/formation)
+  // Validation de la locale pour éviter les URLs invalides (ex: /produits/formation)
   if (locale !== "fr" && locale !== "en") {
     redirect(`/${regular}`);
   }
@@ -28,18 +32,24 @@ export default async function RegularPage({ params }) {
     return <NotFound data={pageData} />;
   }
 
-  // ✅ ROUTING DES LAYOUTS SPÉCIFIQUES
+  // ROUTING DES LAYOUTS SPÉCIFIQUES
   if (frontmatter.layout === "contact") {
     return <Contact data={pageData} />;
   }
-  
+
   if (frontmatter.layout === "faq") {
     return <Faq data={pageData} />;
   }
 
   if (frontmatter.layout === "produits") {
-    // Récupération des produits Sanity (toujours frais grâce à force-dynamic)
-    const products = await client.fetch(`*[_type == "product"]`);
+    // ✅ Sanity blindé : si le CDN Sanity est lent/indisponible, la page
+    // s'affiche quand même (liste de produits vide) au lieu de planter en 500.
+    let products = [];
+    try {
+      products = await client.fetch(`*[_type == "product"]`);
+    } catch (error) {
+      console.error(`[Sanity] Échec de récupération des produits (locale: ${locale}):`, error);
+    }
     return <Produits data={pageData} products={products} />;
   }
 
@@ -51,3 +61,16 @@ export default async function RegularPage({ params }) {
     </>
   );
 }
+
+// Génère toutes les pages (FR + EN) au build pour un rendu statique rapide.
+export const generateStaticParams = async () => {
+  const paths = routing.locales.flatMap((locale) => {
+    const pages = getSinglePage("content", locale);
+    return pages.map((page) => ({
+      locale,
+      regular: page.slug,
+    }));
+  });
+
+  return paths;
+};
