@@ -28,9 +28,14 @@
     "intro_products_title": "L'ONG Volotsangana est ouvert à toutes propositions :",
     "intro_products_list": "- de commandes de produits en bambou\n- de commandes de produits personnalisés en bambou.",
     "intro_products_outro": "N'hésitez pas à nous contacter au :",
+    "org_name": "ONG Volotsangana",
     "liaison": "Bureau de liaison :",
+    "liaison_address": "Chambre de Commerce et d'Industrie d'Antananarivo (CCIA) - R-1\n20, rue Henry RAZANATSEHENO, Antaninarenina - Antananarivo 101 - Madagascar",
     "factory": "Usine :",
-    "phone": "Téléphone :"
+    "factory_address": "Tanjombato - Tongarivo - Antananarivo 101 - Madagascar",
+    "phone": "Téléphone :",
+    "phone_numbers": "(+261) 34 14 220 00 / (+261) 32 74 024 76 / (+261) 34 44 970 69",
+    "email_label": "Email :"
   },
   "contact": {
     "placeholder_name": "Nom",

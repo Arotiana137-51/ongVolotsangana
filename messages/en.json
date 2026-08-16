@@ -28,9 +28,14 @@
     "intro_products_title": "The NGO Volotsangana welcomes all enquiries regarding:",
     "intro_products_list": "- orders for bamboo products\n- orders for personalised bamboo products.",
     "intro_products_outro": "Please do not hesitate to contact us at:",
+    "org_name": "NGO Volotsangana",
     "liaison": "Liaison Office:",
+    "liaison_address": "Antananarivo Chamber of Commerce and Industry (CCIA) - R-1\n20 Rue Henry RAZANATSEHENO, Antaninarenina - Antananarivo 101 - Madagascar",
     "factory": "Factory:",
-    "phone": "Phone:"
+    "factory_address": "Tanjombato - Tongarivo - Antananarivo 101 - Madagascar",
+    "phone": "Telephone:",
+    "phone_numbers": "(+261) 34 14 220 00 / (+261) 32 74 024 76 / (+261) 34 44 970 69",
+    "email_label": "Email:"
   },
   "contact": {
     "placeholder_name": "Name",

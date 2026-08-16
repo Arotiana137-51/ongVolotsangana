@@ -6,6 +6,7 @@ import ProductsGrid from "@layouts/partials/ProductsGrid";
 import Services from "@layouts/partials/Services";
 import Workflow from "@layouts/partials/Workflow";
 import { getListPage } from "@lib/contentParser";
+import { getTranslations } from "next-intl/server";
 import client from "../../sanity";
 
 // Rafraîchit la page toutes les heures en arrière-plan (ISR) sans
@@ -39,6 +40,7 @@ export default async function Home({ params }) {
   const { frontmatter } = homePage;
   const { banner, feature, services, workflow } = frontmatter;
   const { title } = config.site;
+  const t = await getTranslations({ locale, namespace: "nav" });
 
   // ✅ Sanity blindé : si le CDN Sanity est lent/indisponible, la page
   // d'accueil s'affiche quand même (grille de produits vide) au lieu de planter en 500.
@@ -56,7 +58,7 @@ export default async function Home({ params }) {
       <HomeFeatures feature={feature} />
       <Services services={services} />
       <Workflow workflow={workflow} />
-      <ProductsGrid title="Nos produits" products={products} />
+      <ProductsGrid title={t("produits")} products={products} />
     </>
   );
 }

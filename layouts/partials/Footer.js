@@ -1,7 +1,6 @@
 "use client";
 
 import config from "@config/config.json";
-import menu from "@config/menu.json";
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,14 +8,22 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
-  const { copyright, footer_content } = config.params;
-  const { footer } = menu;
+  const { copyright } = config.params;
   const pathname = usePathname();
-  
+
   const tFooter = useTranslations("footer");
 
   const isFormation = pathname?.includes("/formation");
   const isProduits = pathname?.includes("/produits") || pathname?.includes("/products");
+
+  // ✅ Les 3 colonnes d'adresse/contact du footer, désormais traduites
+  // (avant : venaient de config/menu.json, un fichier unique jamais
+  // dupliqué en FR/EN, donc toujours affiché en anglais).
+  const footerColumns = [
+    { title: tFooter("liaison"), lines: tFooter("liaison_address").split("\n") },
+    { title: tFooter("factory"), lines: tFooter("factory_address").split("\n") },
+    { title: tFooter("phone"), lines: tFooter("phone_numbers").split(" / ") },
+  ];
 
   return (
     <footer className="section bg-theme-light pb-0">
@@ -44,22 +51,18 @@ const Footer = () => {
         </div>
 
         <div className="row">
-          {footer.map((col) => {
-            return (
-              <div className="mb-12 sm:col-6 lg:col-3" key={col.name}>
-                {markdownify(col.name, "h2", "h4")}
-                <ul className="mt-6">
-                  {col?.menu.map((item) => (
-                    <li className="mb-1" key={item.text}>
-                      <Link href={item.url} rel="ngo services">
-                        {item.text}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+          {footerColumns.map((col) => (
+            <div className="mb-12 sm:col-6 lg:col-3" key={col.title}>
+              {markdownify(col.title, "h2", "h4")}
+              <ul className="mt-6">
+                {col.lines.map((line) => (
+                  <li className="mb-1" key={line}>
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
           <div className="md-12 sm:col-6 lg:col-3">
             <Link href="/" aria-label="ngo volotsangana logo">
@@ -70,7 +73,21 @@ const Footer = () => {
                 alt="logo ngo volotsangana"
               />
             </Link>
-            {markdownify(footer_content, "p", "mt-3 mb-6 text-sm")}
+            <div className="mt-3 mb-6 text-sm">
+              <p>{tFooter("org_name")}</p>
+
+              <p className="mt-2">{tFooter("liaison")}</p>
+              <p className="whitespace-pre-line">{tFooter("liaison_address")}</p>
+
+              <p className="mt-2">{tFooter("factory")}</p>
+              <p className="whitespace-pre-line">{tFooter("factory_address")}</p>
+
+              <p className="mt-2">{tFooter("phone")}</p>
+              <p className="whitespace-pre-line">{tFooter("phone_numbers")}</p>
+
+              <p className="mt-2">{tFooter("email_label")}</p>
+              <p>ong.volotsangana16@gmail.com</p>
+            </div>
           </div>
         </div>
 

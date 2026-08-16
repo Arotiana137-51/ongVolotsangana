@@ -3,6 +3,11 @@
 import { useRouter, usePathname } from "@i18n/navigation"; // CORRECT : next-intl routing
 import { useLocale } from "next-intl";
 
+const LOCALE_LABELS = {
+  fr: "Français",
+  en: "English",
+};
+
 export default function LangSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
@@ -16,10 +21,10 @@ export default function LangSwitcher() {
   return (
     <button
       onClick={switchLocale}
-      className="px-4 py-2 rounded-full border-2 border-lime-700 text-lime-700 font-bold hover:bg-lime-700 hover:text-white transition-all duration-300 text-sm uppercase"
-      aria-label={`Switch to ${nextLocale}`}
+      className="px-4 py-2 rounded-full border-2 border-lime-700 text-lime-700 font-bold hover:bg-lime-700 hover:text-white transition-all duration-300 text-sm"
+      aria-label={`Switch to ${LOCALE_LABELS[nextLocale]}`}
     >
-      {nextLocale}
+      {LOCALE_LABELS[nextLocale]}
     </button>
   );
 }

@@ -2,22 +2,28 @@
 
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
+import { useLocale } from "next-intl";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { urlFor } from "../../sanity";
 
 const ProductsGrid = ({ title, products }) => {
+  const locale = useLocale();
+
   if (!products?.length) return null;
 
   // une slide par image, toutes les images de tous les produits
-  const slides = products.flatMap((product) =>
-    (product.images || []).map((image, i) => ({
+  const slides = products.flatMap((product) => {
+    // 🌍 Même logique bilingue que ProductCard.js : titre EN si dispo, sinon repli sur le FR
+    const displayTitle = locale === "en" && product.titleEn ? product.titleEn : product.title;
+
+    return (product.images || []).map((image, i) => ({
       key: image._key || `${product._id}-${i}`,
       src: urlFor(image.asset || image).url(),
-      title: product.title,
-    }))
-  );
+      title: displayTitle,
+    }));
+  });
 
   return (
     <section className="section">
