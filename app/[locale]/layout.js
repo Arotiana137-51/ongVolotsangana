@@ -2,6 +2,7 @@ import config from "@config/config.json";
 import theme from "@config/theme.json";
 import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
+import GlobalLoaderProvider from "@layouts/components/GlobalLoaderProvider";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
 import { NextIntlClientProvider } from "next-intl";
@@ -34,10 +35,12 @@ export default async function RootLayout({ children, params }) {
       </head>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <TwSizeIndicator />
-          <Header />
-          <Providers>{children}</Providers>
-          <Footer />
+          <GlobalLoaderProvider>
+            <TwSizeIndicator />
+            <Header />
+            <Providers>{children}</Providers>
+            <Footer />
+          </GlobalLoaderProvider>
         </NextIntlClientProvider>
       </body>
     </html>
